@@ -1,4 +1,5 @@
-- C 教程
+### C 语言教程
+
   - [C 简介](01-intro.md)
   - [C 环境设置](02-environment-setup.md)
   - [C 程序结构](03-program-structure.md)
@@ -52,4 +53,5 @@
   - [C 可变参数](28-variable-arguments.md)
   - [C 内存管理](29-memory-management.md)
   - [C 命令行参数](30-command-line-arguments.md)
-- C 标准库
+
+### C 标准库
