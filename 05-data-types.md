@@ -15,13 +15,13 @@ C 中的类型可分为以下几种：
 
 为了得到某个类型或某个变量在特定平台上的准确大小，您可以使用 **sizeof** 运算符。表达式 _sizeof(type)_ 得到对象或类型的存储字节大小。下面的实例演示了获取 int 类型的大小：
 
-```
-    #include 
-    #include 
+```c
+    #include <stdio.h>
+    #include <limits.h>
 
     int main()
     {
-       printf("Storage size for int : %d n", sizeof(int));
+       printf("int 存储大小 : %lu \n", sizeof(int));
 
        return 0;
     }
@@ -30,7 +30,7 @@ C 中的类型可分为以下几种：
 当您在 Linux 上编译并执行上面的程序时，它会产生下列结果：
 
 ```
-    Storage size for int : 4
+    int 存储大小 : 4 
 ```
 
 ## 浮点类型
@@ -40,16 +40,16 @@ C 中的类型可分为以下几种：
 
 头文件 float.h 定义了宏，在程序中可以使用这些值和其他有关实数二进制表示的细节。下面的实例将输出浮点类型占用的存储空间以及它的范围值：
 
-```
-    #include 
-    #include 
+```c
+    #include <stdio.h>
+    #include <float.h>
 
     int main()
     {
-       printf("Storage size for float : %d n", sizeof(float));
-       printf("Minimum float positive value: %En", FLT_MIN );
-       printf("Maximum float positive value: %En", FLT_MAX );
-       printf("Precision value: %dn", FLT_DIG );
+       printf("Storage size for float: %d\n", sizeof(float));
+       printf("Minimum float positive value: %E\n", FLT_MIN );
+       printf("Maximum float positive value: %E\n", FLT_MAX );
+       printf("Precision value: %d\n", FLT_DIG );
 
        return 0;
     }
@@ -67,6 +67,6 @@ C 中的类型可分为以下几种：
 ## void 类型
 void 类型指定没有可用的值。它通常用于以下三种情况下：
 
-</p> <table > <tr><th>序号</th><th>类型与描述</th></tr> <tr><td>1</td><td><b>函数返回为空</b><br />C 中有各种函数都不返回值，或者您可以说它们返回空。不返回值的函数的返回类型为空。例如 <b>void exit (int status);</b></td></tr> <tr><td>2</td><td><b>函数参数为空</b><br />C 中有各种函数不接受任何参数。不带参数的函数可以接受一个 void。例如 <b>int rand(void);</b></td></tr> <tr><td>3</td><td><b>指针指向 void</b><br />类型为 void * 的指针代表对象的地址，而不是类型。例如，内存分配函数 <b>void *malloc( size_t size );</b> 返回指向 void 的指针，可以转换为任何数据类型。</td></tr> </table> <p>
+</p> <table > <tr><th>序号</th><th>类型与描述</th></tr> <tr><td>1</td><td><b>函数返回为空</b><br />C 中有各种函数都不返回值，或者您可以说它们返回空。不返回值的函数的返回类型为空。例如 <b>void exit (int status);</b></td></tr> <tr><td>2</td><td><b>函数参数为空</b><br />C 中有各种函数不接受任何参数。不带参数的函数可以接受一个 void。例如 <b>int rand(void);</b></td></tr> <tr><td>3</td><td><b>指针指向 void</b><br />类型为 void \* 的指针代表对象的地址，而不是类型。例如，内存分配函数 <b>void *malloc( size_t size );</b> 返回指向 void 的指针，可以转换为任何数据类型。</td></tr> </table> <p>
 
 如果现在您还是无法完全理解 void 类型，不用太担心，在后续的章节中我们将会详细讲解这些概念。  
