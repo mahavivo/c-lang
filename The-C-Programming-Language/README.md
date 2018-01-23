@@ -1,6 +1,4 @@
-C 语言学习教程
-
-## C 程序设计语言（第2版）
+# C 程序设计语言（第2版）
 
 ### 中文版序
 
@@ -14,7 +12,7 @@ C 语言的传播需要我们对语言加以完整的描连，并适应它在使
 
 在我们访问中国的大学和中国科学院时，我们获悉，C语言以及基于它发展起来的UNIX技术引入中国已经有很多年了，由于缺少把描述这一工作的素材翻译成在中国易于学习的形式的权威译本，学生们在学习时遇到了许多困难。我们欣喜地看到徐宝文教授完成《C 程序设计语言》的中译本，我们希望它的出版有助于我们在中华人民共和国的同行更容易地理解 C 语言。
 
-Brian W. Kernighan  Dennis M. Ritchie
+**Brian W. Kernighan  Dennis M. Ritchie**
 
 
 ### 译者序
@@ -38,3 +36,29 @@ Brian W. Kernighan  Dennis M. Ritchie
 译者
 
 2003 年 6 月
+
+***
+
+[序目](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/00.md)
+
+[第 1 章	导言](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/01.md)
+
+[第 2 章	类型、运算符与表达式](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/02.md)
+
+[第 3 章	控制流](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/03.md)
+
+[第 4 章	函数与程序结构](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/04.md)
+
+[第 5 章	指针与数组](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/05.md)
+
+[第 6 章	结构](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/06.md)
+
+[第 7 章	输入与输出](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/07.md)
+
+[第 8 章	UNIX 系统接口](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/08.md)
+
+[附录 A	参考手册](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/09.md)
+
+[附录 B	标准库](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/10.md)
+
+[附录 C	变更小结](https://github.com/mahavivo/c-lang/blob/master/The-C-Programming-Language/11.md)
