@@ -13,7 +13,7 @@ C 标准库提供了大量的程序可以调用的内置函数。例如，函数
 ## 定义函数
 C 语言中的函数定义的一般形式如下：
 
-```
+```c
     return_type function_name( parameter list )
     {
        body of the function
@@ -30,7 +30,7 @@ C 语言中的函数定义的一般形式如下：
 ## 实例
 以下是 **max()** 函数的源代码。该函数有两个参数 num1 和 num2，会返回这两个数中较大的那个数：
 
-```
+```c
     /* 函数返回两个数中较大的那个数 */
     int max(int num1, int num2)
     {
@@ -50,19 +50,19 @@ C 语言中的函数定义的一般形式如下：
 
 函数声明包括以下几个部分：
 
-```
+```c
     return_type function_name( parameter list );
 ```
 
 针对上面定义的函数 max()，以下是函数声明：
 
-```
+```c
     int max(int num1, int num2);
 ```
 
 在函数声明中，参数的名称并不重要，只有参数的类型是必需的，因此下面也是有效的声明：
 
-```
+```c
     int max(int, int);
 ```
 
@@ -75,8 +75,8 @@ C 语言中的函数定义的一般形式如下：
 
 调用函数时，传递所需参数，如果函数返回一个值，则可以存储返回值。例如：
 
-```
-    #include 
+```c
+    #include
 
     /* 函数声明 */
     int max(int num1, int num2);

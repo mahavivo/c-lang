@@ -2,17 +2,17 @@
 
 本章将讲解 C 中的动态内存管理。C 语言为内存的分配和管理提供了几个函数。这些函数可以在 <stdlib.h> 头文件中找到。
 
-</p> <table > <tr><th>序号</th><th>函数和描述</th></tr> <tr><td>1</td><td><b>void *calloc(int num, int size);</b><br />该函数分配一个带有 function allocates an array of <b>num</b> 个元素的数组，每个元素的大小为 <b>size</b> 字节。</td></tr> <tr><td>2</td><td><b>void free(void *address); </b><br />该函数释放 address 所指向的h内存块。</td></tr> <tr><td>3</td><td><b>void *malloc(int num); </b><br />该函数分配一个 <b>num</b> 字节的数组，并把它们进行初始化。</td></tr> <tr><td>4</td><td><b>void *realloc(void *address, int newsize); </b><br />该函数重新分配内存，把内存扩展到 <b>newsize</b>。</td></tr> </table> </div> <br /> 
+</p> <table > <tr><th>序号</th><th>函数和描述</th></tr> <tr><td>1</td><td><b>void *calloc(int num, int size);</b><br />该函数分配一个带有 function allocates an array of <b>num</b> 个元素的数组，每个元素的大小为 <b>size</b> 字节。</td></tr> <tr><td>2</td><td><b>void free(void *address); </b><br />该函数释放 address 所指向的h内存块。</td></tr> <tr><td>3</td><td><b>void *malloc(int num); </b><br />该函数分配一个 <b>num</b> 字节的数组，并把它们进行初始化。</td></tr> <tr><td>4</td><td><b>void *realloc(void *address, int newsize); </b><br />该函数重新分配内存，把内存扩展到 <b>newsize</b>。</td></tr> </table> </div> <br />
 
 # 动态分配内存
 编程时，如果您预先知道数组的大小，那么定义数组时就比较容易。例如，一个存储人名的数组，它最多容纳 100 个字符，所以您可以定义数组，如下所示：
 
-```
+```c
 char name[100];
 ```
 但是，如果您预先不知道需要存储的文本长度，例如您向存储有关一个主题的详细描述。在这里，我们需要定义一个指针，该指针指向未定义所学内存大小的字符，后续再根据需求来分配内存，如下所示：
 
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -48,7 +48,7 @@ Description: Zara ali a DPS student in class 10th
 
 上面的程序也可以使用 <b>calloc()</b> 来编写，只需要把 malloc 替换为 calloc 即可，如下所示：
 
-```
+```c
 calloc(200, sizeof(char));
 ```
 
@@ -60,7 +60,7 @@ calloc(200, sizeof(char));
 
 或者，您可以通过调用函数 realloc() 来增加或减少已分配的内存块的大小。让我们使用 realloc() 和 free() 函数，再次查看上面的实例：
 
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -92,7 +92,7 @@ int main()
    {
       strcat( description, "She is in class 10th");
    }
-   
+
    printf("Name = %s\n", name );
    printf("Description: %s\n", description );
 

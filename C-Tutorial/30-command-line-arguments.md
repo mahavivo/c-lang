@@ -4,10 +4,9 @@
 
 命令行参数是使用 main() 函数参数来处理的，其中，**argc** 是指传入参数的个数，**argv[]** 是一个指针数组，指向传递给程序的每个参数。下面是一个简单的实例，检查命令行是否有提供参数，并根据参数执行相应的动作：
 
-
+```c
 #include <stdio.h>
 
-```
 int main( int argc, char *argv[] )  
 {
    if( argc == 2 )
@@ -29,7 +28,7 @@ int main( int argc, char *argv[] )
 
 ```
 $./a.out testing
-The argument supplied is testing 
+The argument supplied is testing
 ```
 使用两个参数，编译并执行上面的代码，它会产生下列结果：
 
@@ -49,13 +48,13 @@ One argument expected
 
 多个命令行参数之间用空格分隔，但是如果参数本身带有空格，那么传递参数的时候应把参数放置在双引号 "" 或单引号 '' 内部。让我们重新编写上面的实例，有一个空间，那么你可以通过这样的观点，把它们放在双引号或单引号""""。让我们重新编写上面的实例，向程序传递一个放置在双引号内部的命令行参数：
 
-```
+```c
 #include <stdio.h>
 
 int main( int argc, char *argv[] )  
 {
    printf("Program name %s\n", argv[0]);
- 
+
    if( argc == 2 )
    {
       printf("The argument supplied is %s\n", argv[1]);

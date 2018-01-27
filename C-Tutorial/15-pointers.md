@@ -4,8 +4,8 @@
 
 正如您所知道的，每一个变量都有一个内存位置，每一个内存位置都定义了可使用连字号（&）运算符访问的地址，它表示了在内存中的一个地址。请看下面的实例，它将输出定义的变量地址：
 
-```
-    #include 
+```c
+    #include
 
     int main ()
     {
@@ -31,13 +31,13 @@
 ## 什么是指针？
 **指针**是一个变量，其值为另一个变量的地址，即，内存位置的直接地址。就像其他变量或常量一样，您必须在使用指针存储其他变量地址之前，对其进行声明。指针变量声明的一般形式为：
 
-```
+```c
     type *var-name;
 ```
 
 在这里，**type** 是指针的基类型，它必须是一个有效的 C 数据类型，**var-name** 是指针变量的名称。用来声明指针的星号 * 与乘法中使用的星号是相同的。但是，在这个语句中，星号是用来指定一个变量是指针。以下是有效的指针声明：
 
-```
+```c
     int    *ip;    /* 一个整型的指针 */
     double *dp;    /* 一个 double 型的指针 */
     float  *fp;    /* 一个浮点型的指针 */
@@ -49,8 +49,8 @@
 ## 如何使用指针？
 使用指针时会频繁进行以下几个操作：定义一个指针变量、把变量地址赋值给指针、访问指针变量中可用地址的值。这些是通过使用一元运算符 ***** 来返回位于操作数所指定地址的变量的值。下面的实例涉及到了这些操作：
 
-```
-    #include 
+```c
+    #include
 
     int main ()
     {
@@ -83,8 +83,8 @@
 
 NULL 指针是一个定义在标准库中的值为零的常量。请看下面的程序：
 
-```
-    #include 
+```c
+    #include
 
     int main ()
     {
@@ -106,7 +106,7 @@ NULL 指针是一个定义在标准库中的值为零的常量。请看下面的
 
 如需检查一个空指针，您可以使用 if 语句，如下所示：
 
-```
+```c
     if(ptr)     /* 如果 p 非空，则完成 */
     if(!ptr)    /* 如果 p 为空，则完成 */
 ```
@@ -115,4 +115,4 @@ NULL 指针是一个定义在标准库中的值为零的常量。请看下面的
 
 在 C 中，有很多指针相关的概念，这些概念都很简单，但是都很重要。下面列出了 C 程序员必须清楚的一些与指针相关的重要概念：  
 
-</p> <table > <tr><th style="width:35%">概念</th><th>描述</th></tr> <tr><td> <a href="c-pointer-arithmetic.html" title="指针的算术运算">指针的算术运算</a></td><td>可以对指针进行四种算术运算：++、--、+、-</td> </tr> <tr><td> <a href="c-array-of-pointers.html" title="指针数组">指针数组</a></td><td>可以定义用来存储指针的数组。</td> </tr> <tr><td> <a href="c-pointer-to-pointer.html" title="指向指针的指针">指向指针的指针</a></td><td>C 允许指向指针的指针。</td> </tr> <tr><td> <a href="c-passing-pointers-to-functions.html" title="传递指针给函数">传递指针给函数</a></td><td>通过引用或地址传递参数，使传递的参数在调用函数中被改变。</td> </tr> <tr><td> <a href="c-return-pointer-from-functions.html" title="从函数返回指针">从函数返回指针</a></td><td>C 允许函数返回指针到局部变量、静态变量和动态内存分配。</td> </tr> </table> 
+</p> <table > <tr><th style="width:35%">概念</th><th>描述</th></tr> <tr><td> <a href="c-pointer-arithmetic.html" title="指针的算术运算">指针的算术运算</a></td><td>可以对指针进行四种算术运算：++、--、+、-</td> </tr> <tr><td> <a href="c-array-of-pointers.html" title="指针数组">指针数组</a></td><td>可以定义用来存储指针的数组。</td> </tr> <tr><td> <a href="c-pointer-to-pointer.html" title="指向指针的指针">指向指针的指针</a></td><td>C 允许指向指针的指针。</td> </tr> <tr><td> <a href="c-passing-pointers-to-functions.html" title="传递指针给函数">传递指针给函数</a></td><td>通过引用或地址传递参数，使传递的参数在调用函数中被改变。</td> </tr> <tr><td> <a href="c-return-pointer-from-functions.html" title="从函数返回指针">从函数返回指针</a></td><td>C 允许函数返回指针到局部变量、静态变量和动态内存分配。</td> </tr> </table>

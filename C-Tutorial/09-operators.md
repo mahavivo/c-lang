@@ -13,14 +13,14 @@
 
 下表显示了 C 语言支持的所有算术运算符。假设变量 **A** 的值为 10，变量 **B** 的值为 20，则：
 
-</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr><td>+</td><td>把两个操作数相加</td><td> A + B 将得到 30</td></tr> <tr><td>-</td><td>从第一个操作数中减去第二个操作数</td><td> A - B 将得到 -10</td></tr> <tr><td>*</td><td>把两个操作数相乘</td><td> A * B 将得到 200</td></tr> <tr><td>/</td><td>分子除以分母</td><td> B / A 将得到 2</td></tr> <tr><td>%</td><td>取模运算符，整除后的余数</td><td> B % A 将得到 0</td></tr> <tr><td>++</td><td>自增运算符，整数值增加 1</td><td> A++ 将得到 11</td></tr> <tr><td>--</td><td>自减运算符，整数值减少 1</td><td> A-- 将得到 9</td></tr> </table> 
+</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr><td>+</td><td>把两个操作数相加</td><td> A + B 将得到 30</td></tr> <tr><td>-</td><td>从第一个操作数中减去第二个操作数</td><td> A - B 将得到 -10</td></tr> <tr><td>*</td><td>把两个操作数相乘</td><td> A * B 将得到 200</td></tr> <tr><td>/</td><td>分子除以分母</td><td> B / A 将得到 2</td></tr> <tr><td>%</td><td>取模运算符，整除后的余数</td><td> B % A 将得到 0</td></tr> <tr><td>++</td><td>自增运算符，整数值增加 1</td><td> A++ 将得到 11</td></tr> <tr><td>--</td><td>自减运算符，整数值减少 1</td><td> A-- 将得到 9</td></tr> </table>
 
 ### 实例
 
 请看下面的实例，了解 C 语言中所有可用的算术运算符：
 
-```
-    #include 
+```c
+    #include
 
     main()
     {
@@ -60,14 +60,14 @@
 
 下表显示了 C 语言支持的所有关系运算符。假设变量 **A** 的值为 10，变量 **B** 的值为 20，则：
 
-</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr><td>+</td><td>把两个操作数相加</td><td> A + B 将得到 30</td></tr> <tr><td>-</td><td>从第一个操作数中减去第二个操作数</td><td> A - B 将得到 -10</td></tr> <tr><td>*</td><td>把两个操作数相乘</td><td> A * B 将得到 200</td></tr> <tr><td>/</td><td>分子除以分母</td><td> B / A 将得到 2</td></tr> <tr><td>%</td><td>取模运算符，整除后的余数</td><td> B % A 将得到 0</td></tr> <tr><td>++</td><td>自增运算符，整数值增加 1</td><td> A++ 将得到 11</td></tr> <tr><td>--</td><td>自减运算符，整数值减少 1</td><td> A-- 将得到 9</td></tr> </table> 
+</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr><td>+</td><td>把两个操作数相加</td><td> A + B 将得到 30</td></tr> <tr><td>-</td><td>从第一个操作数中减去第二个操作数</td><td> A - B 将得到 -10</td></tr> <tr><td>*</td><td>把两个操作数相乘</td><td> A * B 将得到 200</td></tr> <tr><td>/</td><td>分子除以分母</td><td> B / A 将得到 2</td></tr> <tr><td>%</td><td>取模运算符，整除后的余数</td><td> B % A 将得到 0</td></tr> <tr><td>++</td><td>自增运算符，整数值增加 1</td><td> A++ 将得到 11</td></tr> <tr><td>--</td><td>自减运算符，整数值减少 1</td><td> A-- 将得到 9</td></tr> </table>
 
 ### 实例
 
 请看下面的实例，了解 C 语言中所有可用的关系运算符：
 
-```
-    #include 
+```c
+    #include
 
     main()
     {
@@ -125,14 +125,14 @@
 
 下表显示了 C 语言支持的所有关系逻辑运算符。假设变量 **A** 的值为 1，变量 **B** 的值为 0，则：
 
-</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr><td>&amp;&amp;</td><td>称为逻辑与运算符。如果两个操作数都非零，则条件为真。</td><td> (A &amp;&amp; B) 为假。</td></tr> <tr><td>||</td><td>称为逻辑或运算符。如果两个操作数中有任意一个非零，则条件为真。</td><td> (A || B) 为真。</td></tr> <tr><td>!</td><td>称为逻辑非运算符。用来逆转操作数的逻辑状态。如果条件为真则逻辑非运算符将使其为假。</td><td> !(A &amp;&amp; B) 为真。</td></tr> </table> 
+</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr><td>&amp;&amp;</td><td>称为逻辑与运算符。如果两个操作数都非零，则条件为真。</td><td> (A &amp;&amp; B) 为假。</td></tr> <tr><td>||</td><td>称为逻辑或运算符。如果两个操作数中有任意一个非零，则条件为真。</td><td> (A || B) 为真。</td></tr> <tr><td>!</td><td>称为逻辑非运算符。用来逆转操作数的逻辑状态。如果条件为真则逻辑非运算符将使其为假。</td><td> !(A &amp;&amp; B) 为真。</td></tr> </table>
 
 ### 实例
 
 请看下面的实例，了解 C 语言中所有可用的逻辑运算符：
 
-```
-    #include 
+```c
+    #include
 
     main()
     {
@@ -197,14 +197,14 @@ A^B = 0011 0001
 
 下表显示了 C 语言支持的位运算符。假设变量 **A** 的值为 60，变量 **B** 的值为 13，则：
 
-</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr><td>&amp;</td><td>如果同时存在于两个操作数中，二进制 AND 运算符复制一位到结果中。</td><td> (A &amp; B) 将得到 12，即为 0000 1100</td></tr> <tr><td>|</td><td>如果存在于任一操作数中，二进制 OR 运算符复制一位到结果中。</td><td> (A | B) 将得到 61，即为 0011 1101</td></tr> <tr><td>^</td><td>如果存在于其中一个操作数中但不同时存在于两个操作数中，二进制异或运算符复制一位到结果中。</td><td> (A ^ B) 将得到 49，即为 0011 0001</td></tr> <tr><td>~</td><td>二进制补码运算符是一元运算符，具有"翻转"位效果。</td><td> (~A ) 将得到 -61，即为 1100 0011，2 的补码形式，带符号的二进制数。</td></tr> <tr><td>&lt;&lt;</td><td>二进制左移运算符。左操作数的值向左移动右操作数指定的位数。</td><td> A &lt;&lt; 2 将得到 240，即为 1111 0000</td></tr> <tr><td>&gt;&gt;</td><td>二进制右移运算符。左操作数的值向右移动右操作数指定的位数。</td><td> A &gt;&gt; 2 将得到 15，即为 0000 1111</td></tr> </table> 
+</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr><td>&amp;</td><td>如果同时存在于两个操作数中，二进制 AND 运算符复制一位到结果中。</td><td> (A &amp; B) 将得到 12，即为 0000 1100</td></tr> <tr><td>|</td><td>如果存在于任一操作数中，二进制 OR 运算符复制一位到结果中。</td><td> (A | B) 将得到 61，即为 0011 1101</td></tr> <tr><td>^</td><td>如果存在于其中一个操作数中但不同时存在于两个操作数中，二进制异或运算符复制一位到结果中。</td><td> (A ^ B) 将得到 49，即为 0011 0001</td></tr> <tr><td>~</td><td>二进制补码运算符是一元运算符，具有"翻转"位效果。</td><td> (~A ) 将得到 -61，即为 1100 0011，2 的补码形式，带符号的二进制数。</td></tr> <tr><td>&lt;&lt;</td><td>二进制左移运算符。左操作数的值向左移动右操作数指定的位数。</td><td> A &lt;&lt; 2 将得到 240，即为 1111 0000</td></tr> <tr><td>&gt;&gt;</td><td>二进制右移运算符。左操作数的值向右移动右操作数指定的位数。</td><td> A &gt;&gt; 2 将得到 15，即为 0000 1111</td></tr> </table>
 
 ### 实例
 
 请看下面的实例，了解 C 语言中所有可用的位运算符：
 
-```
-    #include 
+```c
+    #include
 
     main()
     {
@@ -246,14 +246,14 @@ A^B = 0011 0001
 
 下表列出了 C 语言支持的赋值运算符：
 
-</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr><td>=</td><td>简单的赋值运算符，把右边操作数的值赋给左边操作数</td><td> C = A + B 将把 A + B 的值赋给 C</td></tr> <tr><td>+=</td><td>加且赋值运算符，把右边操作数加上左边操作数的结果赋值给左边操作数</td><td> C += A 相当于 C = C + A</td></tr> <tr><td>-=</td><td>减且赋值运算符，把左边操作数减去右边操作数的结果赋值给左边操作数</td><td> C -= A 相当于 C = C - A</td></tr> <tr><td>*=</td><td>乘且赋值运算符，把右边操作数乘以左边操作数的结果赋值给左边操作数</td><td> C *= A 相当于 C = C * A</td></tr> <tr><td>/=</td><td>除且赋值运算符，把左边操作数除以右边操作数的结果赋值给左边操作数</td><td> C /= A 相当于 C = C / A</td></tr> <tr><td>%=</td><td>求模且赋值运算符，求两个操作数的模赋值给左边操作数</td><td> C %= A 相当于 C = C % A</td></tr> <tr><td>&lt;&lt;=</td><td>左移且赋值运算符</td><td> C &lt;&lt;= 2 等同于 C = C &lt;&lt; 2</td></tr> <tr><td>&gt;&gt;=</td><td>右移且赋值运算符</td><td> C &gt;&gt;= 2 等同于 C = C &gt;&gt; 2</td></tr> <tr><td>&amp;=</td><td>按位与且赋值运算符</td><td> C &amp;= 2 等同于 C = C &amp; 2</td></tr> <tr><td>^=</td><td>按位异或且赋值运算符</td><td> C ^= 2 等同于 C = C ^ 2</td></tr> <tr><td>|=</td><td>按位或且赋值运算符</td><td> C |= 2 等同于 C = C | 2</td></tr> </table> 
+</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr><td>=</td><td>简单的赋值运算符，把右边操作数的值赋给左边操作数</td><td> C = A + B 将把 A + B 的值赋给 C</td></tr> <tr><td>+=</td><td>加且赋值运算符，把右边操作数加上左边操作数的结果赋值给左边操作数</td><td> C += A 相当于 C = C + A</td></tr> <tr><td>-=</td><td>减且赋值运算符，把左边操作数减去右边操作数的结果赋值给左边操作数</td><td> C -= A 相当于 C = C - A</td></tr> <tr><td>*=</td><td>乘且赋值运算符，把右边操作数乘以左边操作数的结果赋值给左边操作数</td><td> C *= A 相当于 C = C * A</td></tr> <tr><td>/=</td><td>除且赋值运算符，把左边操作数除以右边操作数的结果赋值给左边操作数</td><td> C /= A 相当于 C = C / A</td></tr> <tr><td>%=</td><td>求模且赋值运算符，求两个操作数的模赋值给左边操作数</td><td> C %= A 相当于 C = C % A</td></tr> <tr><td>&lt;&lt;=</td><td>左移且赋值运算符</td><td> C &lt;&lt;= 2 等同于 C = C &lt;&lt; 2</td></tr> <tr><td>&gt;&gt;=</td><td>右移且赋值运算符</td><td> C &gt;&gt;= 2 等同于 C = C &gt;&gt; 2</td></tr> <tr><td>&amp;=</td><td>按位与且赋值运算符</td><td> C &amp;= 2 等同于 C = C &amp; 2</td></tr> <tr><td>^=</td><td>按位异或且赋值运算符</td><td> C ^= 2 等同于 C = C ^ 2</td></tr> <tr><td>|=</td><td>按位或且赋值运算符</td><td> C |= 2 等同于 C = C | 2</td></tr> </table>
 
 ### 实例
 
 请看下面的实例，了解 C 语言中所有可用的赋值运算符：
 
-```
-    #include 
+```c
+    #include
 
     main()
     {
@@ -315,14 +315,14 @@ A^B = 0011 0001
 
 下表列出了 C 语言支持的其他一些重要的运算符，包括 **sizeof** 和 **? :**。
 
-</b>。</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr> <td>sizeof()</td><td>返回变量的大小。</td><td>sizeof(a) 将返回 4，其中 a 是整数。</td> </tr> <tr> <td>&amp;</td><td>返回变量的地址。</td><td>&amp;a; 将给出变量的实际地址。</td> </tr> <tr> <td>*</td><td>指向一个变量。</td><td>*a; 将指向一个变量。</td> </tr> <tr> <td>? :</td><td>条件表达式</td><td>如果条件为真 ? 则值为 X : 否则值为 Y</td> </tr> </table> 
+</b>。</p> <table > <tr><th style="width:10%">运算符</th><th style="width:55%;">描述</th><th>实例</th></tr> <tr> <td>sizeof()</td><td>返回变量的大小。</td><td>sizeof(a) 将返回 4，其中 a 是整数。</td> </tr> <tr> <td>&amp;</td><td>返回变量的地址。</td><td>&amp;a; 将给出变量的实际地址。</td> </tr> <tr> <td>*</td><td>指向一个变量。</td><td>*a; 将指向一个变量。</td> </tr> <tr> <td>? :</td><td>条件表达式</td><td>如果条件为真 ? 则值为 X : 否则值为 Y</td> </tr> </table>
 
 ### 实例
 
 请看下面的实例，了解 C 语言中所有可用的杂项运算符：
 
-```
-    #include 
+```c
+    #include
 
     main()
     {
@@ -371,8 +371,8 @@ A^B = 0011 0001
 
 请看下面的实例，了解 C 语言中运算符的优先级：
 
-```
-    #include 
+```c
+    #include
 
     main()
     {
@@ -406,4 +406,3 @@ A^B = 0011 0001
     (a + b) * (c / d) 的值是 90
     a + (b * c) / d 的值是 50
 ```
-  

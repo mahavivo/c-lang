@@ -7,7 +7,7 @@
 # 打开文件
 您可以使用 fopen( ) 函数来创建一个新的文件或者打开一个已有的文件，这个调用会初始化类型 FILE 的一个对象，类型 FILE 包含了所有用来控制流的必要的信息。下面是这个函数调用的原型：
 
-```
+```c
 FILE *fopen( const char * filename, const char * mode );
 ```
 
@@ -22,10 +22,10 @@ FILE *fopen( const char * filename, const char * mode );
 
 ## 关闭文件
 
-； 
+；
 为了关闭文件，请使用 fclose( ) 函数。函数的原型如下：
 
-```
+```c
 int fclose( FILE *fp );
 ```
 
@@ -37,7 +37,7 @@ C 标准库提供了各种函数来按字符或者以固定长度字符串的形
 
 下面是把字符写入到流中的最简单的函数：
 
-```
+```c
 int fputc( int c, FILE *fp );
 ```
 
@@ -48,7 +48,7 @@ int fputc( int c, FILE *fp );
 
 **注意：**请确保您有可用的 **/tmp** 目录，如果不存在该目录，则需要在您的计算机上先创建该目录。
 
-```
+```c
 #include <stdio.h>
 
 main()
@@ -68,13 +68,13 @@ main()
 
 下面是从文件读取单个字符的最简单的函数：
 
-```
+```c
 int fgetc( FILE * fp );
 ```
 
 **fgetc()** 函数从 fp 所指向的输入文件中读取一个字符。返回值是读取的字符，如果发生错误则返回 **EOF**。下面的函数允许您从流中读取一个字符串：
 
-```
+```c
 char *fgets( char *buf, int n, FILE *fp );
 ```
 
@@ -82,7 +82,7 @@ char *fgets( char *buf, int n, FILE *fp );
 
 如果这个函数在读取最后一个字符之前就遇到一个换行符 '\n' 或文件的末尾 EOF，则只会返回读取到的字符，包括换行符。您也可以使用 **int fscanf(FILE *fp, const char *format, ...)** 函数来从文件中读取字符串，但是在遇到第一个空格字符时，它会停止读取。
 
-```
+```c
 #include <stdio.h>
 
 main()
@@ -96,7 +96,7 @@ main()
 
    fgets(buff, 255, (FILE*)fp);
    printf("2: %s\n", buff );
-   
+
    fgets(buff, 255, (FILE*)fp);
    printf("3: %s\n", buff );
    fclose(fp);
@@ -117,11 +117,11 @@ main()
 
 下面两个函数用于二进制输入和输出：
 
-```
-size_t fread(void *ptr, size_t size_of_elements, 
+```c
+size_t fread(void *ptr, size_t size_of_elements,
              size_t number_of_elements, FILE *a_file);
-              
-size_t fwrite(const void *ptr, size_t size_of_elements, 
+
+size_t fwrite(const void *ptr, size_t size_of_elements,
              size_t number_of_elements, FILE *a_file);
 ```
 这两个函数都是用于存储块的读写 - 通常是数组或结构体。

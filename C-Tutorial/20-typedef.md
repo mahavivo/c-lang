@@ -2,7 +2,7 @@
 
 C 语言提供了 **typedef** 关键字，您可以使用它来为类型取一个新的名字。下面的实例为单字节数字定义了一个术语 **BYTE**：
 
-```
+```c
     typedef unsigned char BYTE;
 ```
 
@@ -14,15 +14,15 @@ C 语言提供了 **typedef** 关键字，您可以使用它来为类型取一�
 
 按照惯例，定义时会大写字母，以便提醒用户类型名称是一个象征性的缩写，但您也可以使用小写字母，如下：
 
-```
+```c
     typedef unsigned char byte;
 ```
 
 您也可以使用 **typedef** 来为用户自定义的数据类型取一个新的名字。例如，您可以对结构体使用 typedef 来定义一个新的数据类型，然后使用这个新的数据类型来直接定义结构变量，如下：
 
-```
-    #include 
-    #include 
+```c
+    #include
+    #include
 
     typedef struct Books
     {
@@ -65,8 +65,8 @@ C 语言提供了 **typedef** 关键字，您可以使用它来为类型取一�
 
 下面是 #define 的最简单的用法：
 
-```
-    #include 
+```c
+    #include
 
     #define TRUE  1
     #define FALSE 0

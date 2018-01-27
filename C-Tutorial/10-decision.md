@@ -12,12 +12,12 @@ C 语言把任何**非零**和**非空**的值假定为 **true**，把**零**或
 
 C 语言提供了以下类型的判断语句。点击链接查看每个语句的细节。
 
-</p> <table > <tr><th style="width:35%">语句</th><th>描述</th></tr> <tr><td><a href="c-if.html" title="C 中的 if 语句">if 语句</a></td><td>一个 <b>if 语句</b> 由一个布尔表达式后跟一个或多个语句组成。</td></tr> <tr><td><a href="c-if-else.html" title="C 中的 if...else 语句">if...else 语句</a></td><td>一个 <b>if 语句</b> 后可跟一个可选的 <b>else 语句</b>，else 语句在布尔表达式为假时执行。</td></tr> <tr><td><a href="c-nested-if.html" title="C 中的嵌套 if 语句">嵌套 if 语句</a></td><td>您可以在一个 <b>if</b> 或 <b>else if</b> 语句内使用另一个 <b>if</b> 或 <b>else if</b> 语句。</td></tr> <tr><td><a href="c-switch.html" title="C 中的 switch 语句">switch 语句</a></td><td>一个 <b>switch</b> 语句允许测试一个变量等于多个值时的情况。</td></tr> <tr><td><a href="c-nested-switch.html" title="C 中的嵌套 switch 语句">嵌套 switch 语句</a></td><td>您可以在一个 <b>switch</b> 语句内使用另一个 <b>switch </b> 语句。</td></tr> </table> <br /> 
+</p> <table > <tr><th style="width:35%">语句</th><th>描述</th></tr> <tr><td><a href="c-if.html" title="C 中的 if 语句">if 语句</a></td><td>一个 <b>if 语句</b> 由一个布尔表达式后跟一个或多个语句组成。</td></tr> <tr><td><a href="c-if-else.html" title="C 中的 if...else 语句">if...else 语句</a></td><td>一个 <b>if 语句</b> 后可跟一个可选的 <b>else 语句</b>，else 语句在布尔表达式为假时执行。</td></tr> <tr><td><a href="c-nested-if.html" title="C 中的嵌套 if 语句">嵌套 if 语句</a></td><td>您可以在一个 <b>if</b> 或 <b>else if</b> 语句内使用另一个 <b>if</b> 或 <b>else if</b> 语句。</td></tr> <tr><td><a href="c-switch.html" title="C 中的 switch 语句">switch 语句</a></td><td>一个 <b>switch</b> 语句允许测试一个变量等于多个值时的情况。</td></tr> <tr><td><a href="c-nested-switch.html" title="C 中的嵌套 switch 语句">嵌套 switch 语句</a></td><td>您可以在一个 <b>switch</b> 语句内使用另一个 <b>switch </b> 语句。</td></tr> </table> <br />
 
 ## ? : 运算符
 我们已经在前面的章节中讲解了 **条件运算符 ? :**，可以用来替代 **if...else** 语句。它的一般形式如下
 
-```
+```c
     Exp1 ? Exp2 : Exp3;
 ```
 

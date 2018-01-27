@@ -15,7 +15,7 @@ C 语言提供了 **perror()** 和 **strerror()** 函数来显示与 **errno** �
 
 让我们来模拟一种错误情况，尝试打开一个不存在的文件。您可以使用多种方式来输出错误消息，在这里我们使用函数来演示用法。另外有一点需要注意，您应该使用 **stderr** 文件流来输出所有的错误。
 
-```
+```c
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
@@ -56,7 +56,7 @@ Error opening file: No such file or directory
 
 为了避免这种情况发生，下面的代码在进行处罚运算前会先检查除数是否为零：
 
-```
+```c
 <#include <stdio.h>
 #include <stdlib.h>
 
@@ -65,7 +65,7 @@ main()
    int dividend = 20;
    int divisor = 0;
    int quotient;
- 
+
    if( divisor == 0){
       fprintf(stderr, "Division by zero! Exiting...\n");
       exit(-1);
@@ -88,7 +88,7 @@ Division by zero! Exiting...
 
 如果程序中存在一种错误情况，当您退出程序时，会带有状态值 EXIT_FAILURE，被定义为 -1。所以，上面的程序可以写成：
 
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -97,7 +97,7 @@ main()
    int dividend = 20;
    int divisor = 5;
    int quotient;
- 
+
    if( divisor == 0){
       fprintf(stderr, "Division by zero! Exiting...\n");
       exit(EXIT_FAILURE);

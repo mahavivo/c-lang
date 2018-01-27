@@ -4,38 +4,38 @@
 **C 预处理器**不是编译器的组成部分，但是它是编译过程中一个单独的步骤。简言之，C 预处理器只不过是一个文本替换工具而已，他们会指示编译器在实际编译之前完成所需的预处理。我们将把 C 预处理器（C Preprocessor）简写为 CPP。
 
 所有的预处理器命令都是以井号（#）开头。它必须是第一个非空字符，为了增强可读性，预处理器指令应从第一列开始。下面列出了所有重要的预处理器指令
-</p> <table > <tr><th style="width:20%">指令</th><th>描述</th></tr> <tr><td>#define</td><td>定义宏</td></tr> <tr><td>#include</td><td>包含一个源代码文件</td></tr> <tr><td>#undef</td><td>取消已定义的宏</td></tr> <tr><td>#ifdef</td><td>如果宏已经定义，则返回真</td></tr> <tr><td>#ifndef</td><td>如果宏没有定义，则返回真</td></tr> <tr><td>#if</td><td>如果给定条件为真，则编译下面代码</td></tr> <tr><td>#else</td><td>#if 的替代方案</td></tr> <tr><td>#elif</td><td>如果前面的 #if 给定条件不为真，当前条件为真，则编译下面代码</td></tr> <tr><td>#endif</td><td>结束一个 #if……#else 条件编译块</td></tr> <tr><td>#error</td><td>当遇到标准错误时，输出错误消息</td></tr> <tr><td>#pragma</td><td>使用标准化方法，向编译器发布特殊的命令到编译器中</td></tr> </table> </div> 
+</p> <table > <tr><th style="width:20%">指令</th><th>描述</th></tr> <tr><td>#define</td><td>定义宏</td></tr> <tr><td>#include</td><td>包含一个源代码文件</td></tr> <tr><td>#undef</td><td>取消已定义的宏</td></tr> <tr><td>#ifdef</td><td>如果宏已经定义，则返回真</td></tr> <tr><td>#ifndef</td><td>如果宏没有定义，则返回真</td></tr> <tr><td>#if</td><td>如果给定条件为真，则编译下面代码</td></tr> <tr><td>#else</td><td>#if 的替代方案</td></tr> <tr><td>#elif</td><td>如果前面的 #if 给定条件不为真，当前条件为真，则编译下面代码</td></tr> <tr><td>#endif</td><td>结束一个 #if……#else 条件编译块</td></tr> <tr><td>#error</td><td>当遇到标准错误时，输出错误消息</td></tr> <tr><td>#pragma</td><td>使用标准化方法，向编译器发布特殊的命令到编译器中</td></tr> </table> </div>
 
 ## 预处理器实例
 
 分析下面的实例来理解不同的指令。
 
-```
+```c
 #define MAX_ARRAY_LENGTH 20
 ```
 这个指令告诉 CPP 把所有的 MAX_ARRAY_LENGTH 替换为 20。使用 #define 定义常量来增强可读性。
 
-```
+```c
 #include <stdio.h>
 #include "myheader.h"
 ```
 这些指令告诉 CPP 从系统库中获取 stdio.h，并添加文本到当前的源文件中。下一行告诉 CPP 从本地目录中获取 myheader.h，并添加内容到当前的源文件中。
 
-```
+```c
 #undef  FILE_SIZE
 #define FILE_SIZE 42
 ```
 
 这个指令告诉 CPP 取消已定义的 FILE_SIZE，并定义它为 42。
 
-```
+```c
 #ifndef MESSAGE
    #define MESSAGE "You wish!"
 #endif
 ```
 这个指令告诉 CPP 只有当 MESSAGE 未定义时，才定义 MESSAGE。
 
-```
+```c
 #ifdef DEBUG
    /* Your debugging statements here */
 #endif
@@ -49,7 +49,7 @@ ANSI C 定义了许多宏。在编程中您可以使用这些宏，但是不同�
 </p> <table > <tr><th style="width:20%">宏</th><th>描述</th></tr> <tr><td>__DATE__</td><td>当前日期，一个以 "MMM DD YYYY" 格式表示的字符常量。</td></tr> <tr><td>__TIME__</td><td>当前时间，一个以 "HH:MM:SS" 格式表示的字符常量。</td></tr> <tr><td>__FILE__</td><td>这会包含当前文件名，一个字符串常量。</td></tr> <tr><td>__LINE__</td><td>这会包含当前行号，一个十进制常量。</td></tr> <tr><td>__STDC__</td><td>当编译器以 ANSI 标准编译时，则定义为 1。</td></tr> </table> <p>
 让我们来尝试下面的实例：
 
-```
+```c
 # include <stdio.h>
 
 main()
@@ -81,7 +81,7 @@ C 预处理器提供了下列的运算符来帮助您创建宏：
 
 一个宏通常写在一个单行上。但是如果宏太长，一个单行容纳不下，则使用宏延续运算符（\）。例如：
 
-```
+```c
 #define  message_for(a, b)  \
     printf(#a " and " #b ": We love you!\n")
 ```
@@ -90,7 +90,7 @@ C 预处理器提供了下列的运算符来帮助您创建宏：
 
 在宏定义中，当需要把一个宏的参数转换为字符串常量时，则使用字符串常量化运算符（#）。在宏中使用的该运算符有一个特定的参数或参数列表。例如：
 
-```
+```c
 #include <stdio.h>
 
 #define  message_for(a, b)  \
@@ -112,7 +112,7 @@ Carole and Debra: We love you!
 
 宏定义内的标记粘贴运算符（##）会合并两个参数。它允许在宏定义中两个独立的标记被合并为一个标记。例如：
 
-```
+```c
 #include <stdio.h>
 
 #define tokenpaster(n) printf ("token" #n " = %d", token##n)
@@ -120,7 +120,7 @@ Carole and Debra: We love you!
 int main(void)
 {
    int token34 = 40;
-   
+
    tokenpaster(34);
    return 0;
 }
@@ -141,7 +141,7 @@ printf ("token34 = %d", token34);
 
 预处理器 **defined** 运算符是用在常量表达式中的，用来确定一个标识符是否已经使用 #define 定义过。如果指定的标识符已定义，则值为真（非零）。如果指定的标识符未定义，则值为假（零）。下面的实例演示了 defined() 运算符的用法：
 
-```
+```c
 #include <stdio.h>
 
 #if !defined (MESSAGE)
@@ -162,19 +162,19 @@ int main(void)
 ## 参数化的宏
 
 CPP 一个强大的功能是可以使用参数化的宏来模拟函数。例如，下面的代码是计算一个数的平方：
-```
+```c
 int square(int x) {
    return x * x;
 }
 ```
 我们可以使用宏重写上面的代码，如下：
 
-```
+```c
 #define square(x) ((x) * (x))
 ```
 在使用带有参数的宏之前，必须使用 **#define** 指令定义。参数列表是括在圆括号内，且必须紧跟在宏名称的后边。宏名称和左圆括号之间不允许有空格。例如：
 
-```
+```c
 #include <stdio.h>
 
 #define MAX(x,y) ((x) > (y) ? (x) : (y))

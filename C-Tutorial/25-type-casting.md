@@ -7,7 +7,7 @@
 ```
 请看下面的实例，使用强制类型转换运算符把一个整数变量除以另一个整数变量，得到一个浮点数：
 
-```
+```c
 #include <stdio.h>
 
 main()
@@ -35,7 +35,7 @@ Value of mean : 3.400000
 
 整数提升是指把小于 **int** 或 **unsigned int** 的整数类型转换为 **int** 或 **unsigned int** 的过程。请看下面的实例，在 int 中添加一个字符：
 
-```
+```c
 #include <stdio.h>
 
 main()
@@ -64,7 +64,7 @@ Value of sum : 116
 ![Usual Arithmetic Conversion](images/c-type-casting/usual_arithmetic_conversion.png)
 常用的算术转换不适用于赋值运算符、逻辑运算符 && 和 ||。让我们看看下面的实例来理解这个概念：
 
-```
+```c
 #include <stdio.h>
 
 main()

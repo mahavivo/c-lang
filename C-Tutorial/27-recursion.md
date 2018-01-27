@@ -2,7 +2,7 @@
 
 递归是以自相似的方式重复项目的处理过程。同样地，在编程语言中，在函数内部调用函数自身，称为递归调用。如下：
 
-```
+```c
 void recursion()
 {
    recursion(); /* 函数调用自身 */
@@ -23,7 +23,7 @@ C 语言支持递归，即，一个函数可以调用自身。但在使用递归
 
 下面的实例使用递归函数计算一个给定的数的阶乘：
 
-```
+```c
 #include <stdio.h>
 
 int factorial(unsigned int i)
@@ -52,7 +52,7 @@ Factorial of 15 is 2004310016
 
 下面的实例使用递归函数生成一个给定的数的斐波那契数列：
 
-```
+```c
 #include <stdio.h>
 
 int fibonaci(int i)

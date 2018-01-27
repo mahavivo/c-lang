@@ -11,13 +11,13 @@ C 语言支持**数组**数据结构，它可以存储一个固定大小的相�
 ## 声明数组
 在 C 中要声明一个数组，需要指定元素的类型和元素的数量，如下所示：
 
-```
+```c
     type arrayName [ arraySize ];
 ```
 
 这叫做一维数组。**arraySize** 必须是一个大于零的整数常量，**type** 可以是任意有效的 C 数据类型。例如，要声明一个类型为 double 的包含 10 个元素的数组 **balance**，声明语句如下：
 
-```
+```c
     double balance[10];
 ```
 
@@ -26,7 +26,7 @@ C 语言支持**数组**数据结构，它可以存储一个固定大小的相�
 ## 初始化数组
 在 C 中，您可以逐个初始化数组，也可以使用一个初始化语句，如下所示：
 
-```
+```c
     double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
 ```
 
@@ -34,13 +34,13 @@ C 语言支持**数组**数据结构，它可以存储一个固定大小的相�
 
 如果您省略掉了数组的大小，数组的大小则为初始化时元素的个数。因此，如果：
 
-```
+```c
     double balance[] = {1000.0, 2.0, 3.4, 7.0, 50.0};
 ```
 
 您将创建一个数组，它与前一个实例中所创建的数组是完全相同的。下面是一个为数组中某个元素赋值的实例：
 
-```
+```c
     balance[4] = 50.0;
 ```
 
@@ -51,14 +51,14 @@ C 语言支持**数组**数据结构，它可以存储一个固定大小的相�
 ## 访问数组元素
 数组元素可以通过数组名称加索引进行访问。元素的索引是放在方括号内，跟在数组名称的后边。例如：
 
-```
+```c
     double salary = balance[9];
 ```
 
 上面的语句将把数组中第 10 个元素的值赋给 salary 变量。下面的实例使用了上述的三个概念，即，声明数组、数组赋值、访问数组：
 
-```
-    #include 
+```c
+    #include
 
     int main ()
     {
@@ -99,4 +99,4 @@ C 语言支持**数组**数据结构，它可以存储一个固定大小的相�
 ## C 中数组详解
 在 C 中，数组是非常重要的，我们需要了解更多有关数组的细节。下面列出了 C 程序员必须清楚的一些与数组相关的重要概念：
 
-</p> <table > <tr><th style="width:30%">概念</th><th>描述</th></tr> <tr><td> <a href="c-multi-dimensional-arrays.html" title="C 中的多维数组">多维数组</a></td><td>C 支持多维数组。多维数组最简单的形式是二维数组。</td> </tr> <tr><td> <a href="c-passing-arrays-to-functions.html" title="C 中传递数组给函数作为参数">传递数组给函数</a></td><td>您可以通过指定不带索引的数组名称来给函数传递一个指向数组的指针。</td> </tr> <tr><td> <a href="c-return-arrays-from-function.html" title="C 中从函数返回数组">从函数返回数组</a></td><td>C 允许从函数返回数组。</td> </tr> <tr><td> <a href="c-pointer-to-an-array.html" title="C 中指向数组的指针">指向数组的指针</a></td><td>您可以通过指定不带索引的数组名称来生成一个指向数组中第一个元素的指针。</td> </tr> </table> 
+</p> <table > <tr><th style="width:30%">概念</th><th>描述</th></tr> <tr><td> <a href="c-multi-dimensional-arrays.html" title="C 中的多维数组">多维数组</a></td><td>C 支持多维数组。多维数组最简单的形式是二维数组。</td> </tr> <tr><td> <a href="c-passing-arrays-to-functions.html" title="C 中传递数组给函数作为参数">传递数组给函数</a></td><td>您可以通过指定不带索引的数组名称来给函数传递一个指向数组的指针。</td> </tr> <tr><td> <a href="c-return-arrays-from-function.html" title="C 中从函数返回数组">从函数返回数组</a></td><td>C 允许从函数返回数组。</td> </tr> <tr><td> <a href="c-pointer-to-an-array.html" title="C 中指向数组的指针">指向数组的指针</a></td><td>您可以通过指定不带索引的数组名称来生成一个指向数组中第一个元素的指针。</td> </tr> </table>

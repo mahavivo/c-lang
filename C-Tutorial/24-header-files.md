@@ -15,12 +15,12 @@ A simple practice in C 或 C++ 程序中，建议把所有的常量、宏、系�
 
 使用预处理指令 **#include** 可以引用用户和系统头文件。它的形式有以下两种：
 
-```
+```c
 #include &lt;file&gt;
 ```
 这种形式用于引用系统头文件。它在系统目录的标准列表中搜索名为 file 的文件。在编译源代码时，您可以通过 -I 选项把目录前置在该列表前。
 
-```
+```c
 #include "file"
 ```
 这种形式用于引用用户头文件。它在包含当前文件的目录中搜索名为 file 的文件。在编译源代码时，您可以通过 -I 选项把目录前置在该列表前。
@@ -29,24 +29,24 @@ A simple practice in C 或 C++ 程序中，建议把所有的常量、宏、系�
 
 **#include** 指令会指示 C 预处理器浏览指定的文件作为输入。预处理器的输出包含了已经生成的输出，被引用文件生成的输出以及 **#include** 指令之后的文本输出。例如，如果您有一个头文件 header.h，如下：
 
-```
+```c
 char *test (void);
 ```
 和一个使用了头文件的主程序 _program.c_，如下：
 
-```
-int x; #include "header.h" int main (void) { puts (test ()); } 
+```c
+int x; #include "header.h" int main (void) { puts (test ()); }
 ```
 编译器会看到如下的令牌流：
 
 ```
-int x; char *test (void); int main (void) { puts (test ()); } 
+int x; char *test (void); int main (void) { puts (test ()); }
 ```
 ## 只引用一次头文件
 
 如果一个头文件被引用两次，编译器会处理两次头文件的内容，这将产生错误。为了防止这种情况，标准的做法是把文件的整个内容放在条件编译语句中，如下：
 
-```
+```c
 #ifndef HEADER_FILE
 #define HEADER_FILE
 
@@ -61,7 +61,7 @@ the entire header file file
 
 有时需要从多个不同的头文件中选择一个引用到程序中。例如，需要指定在不同的操作系统上使用的配置参数。您可以通过一系列条件来实现这点，如下：
 
-```
+```c
 #if SYSTEM_1
    # include "system_1.h"
 #elif SYSTEM_2
@@ -72,7 +72,7 @@ the entire header file file
 ```
 但是如果头文件比较多的时候，这么做是很不妥当的，预处理器使用宏来定义头文件的名称。这就是所谓的**有条件引用**。它不是用头文件的名称作为 **#include** 的直接参数，您只需要使用宏名称代替即可：
 
-```
+```c
  #define SYSTEM_H "system_1.h"
  ...
  #include SYSTEM_H
