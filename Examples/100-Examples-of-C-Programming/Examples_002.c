@@ -2,7 +2,7 @@
 
 int main()
 {
-	// 企业发放的奖金根据利润提成。
+    // 企业发放的奖金根据利润提成。
     double i;
     double bonus1, bonus2, bonus4, bonus6, bonus10, bonus;
 

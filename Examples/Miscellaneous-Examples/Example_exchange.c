@@ -2,24 +2,24 @@
 
 int main()
 {
-	// 交换两个数的值
+    // 交换两个数的值
 
-	double firstNumber, secondNumber, temproaryVariable;
+    double firstNumber, secondNumber, temproaryVariable;
 
-	printf("输入第一个数字：");
-	scanf("%lf", &firstNumber);
+    printf("输入第一个数字：");
+    scanf("%lf", &firstNumber);
 
-	printf("输入第二个数字：");
-	scanf("%lf", &secondNumber);
+    printf("输入第二个数字：");
+    scanf("%lf", &secondNumber);
 
-	temproaryVariable = firstNumber;
+    temproaryVariable = firstNumber;
 
-	firstNumber = secondNumber;
+    firstNumber = secondNumber;
 
-	secondNumber = temproaryVariable;
+    secondNumber = temproaryVariable;
 
-	printf("\n交换后, firstNumber = %.21f\n", firstNumber);
-	printf("交换后, secondNumber = %.21f\n", secondNumber);
+    printf("\n交换后, firstNumber = %.21f\n", firstNumber);
+    printf("交换后, secondNumber = %.21f\n", secondNumber);
 
-	return 0;
+    return 0;
 }

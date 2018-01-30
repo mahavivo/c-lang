@@ -3,8 +3,8 @@
 void swap(int *, int *);
 int main()
 {
-	// 输入3个数a,b,c，按大小顺序输出。
-	int a, b, c;
+    // 输入3个数a,b,c，按大小顺序输出。
+    int a, b, c;
     int *p1, *p2, *p3;
     printf("输入 a, b, c:\n");
     scanf("%d %d %d", &a, &b, &c);

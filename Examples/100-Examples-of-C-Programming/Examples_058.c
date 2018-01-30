@@ -2,8 +2,8 @@
 
 int main()
 {
-	// 学用rectangle画方形。（在TC中实现）。
-	int x0, y0, y1, x1, driver, mode, i;
+    // 学用rectangle画方形。（在TC中实现）。
+    int x0, y0, y1, x1, driver, mode, i;
     driver = VGA;
     mode = VGAHI;
     initgraph(&driver, &mode, "");

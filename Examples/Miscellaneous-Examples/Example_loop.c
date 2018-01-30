@@ -2,14 +2,14 @@
 
 int main()
 {
-	// 循环输出26个字母
+    // 循环输出26个字母
 
-	char c;
+    char c;
 
-	for (c = 'A'; c <= 'Z'; ++c)
-	{
-		printf("%c", c);
-	}
+    for (c = 'A'; c <= 'Z'; ++c)
+    {
+        printf("%c", c);
+    }
 
-	return 0;
+    return 0;
 }

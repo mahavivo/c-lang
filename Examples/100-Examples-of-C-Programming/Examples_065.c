@@ -43,7 +43,7 @@ void LineToDemo(void)
 }
 int main()
 {
-	// 一个最优美的图案（在TC中实现）。
+    // 一个最优美的图案（在TC中实现）。
     int driver, mode;
     driver=CGA; mode=CGAC0;
     initgraph(&driver, &mode, "");

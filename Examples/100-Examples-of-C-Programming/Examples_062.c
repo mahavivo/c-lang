@@ -3,8 +3,8 @@
 
 int main()
 {
-	// 学习putpixel画点，（在TC中实现）。
-	int i, j, driver = VGA, mode = VGAHI;
+    // 学习putpixel画点，（在TC中实现）。
+    int i, j, driver = VGA, mode = VGAHI;
     initgraph(&driver, &mode, "");
     setbkcolor(YELLOW);
     for (i = 50; i <= 230;i += 20) {

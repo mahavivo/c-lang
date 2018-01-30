@@ -5,8 +5,8 @@
 
 int main()
 {
-	// #if #ifdef和#ifndef的综合应用。
-	int a=10,b=20;
+    // #if #ifdef和#ifndef的综合应用。
+    int a=10,b=20;
 #ifdef MAX
     printf("更大的数字是 %d\n",MAXIMUM(a,b));
 #else

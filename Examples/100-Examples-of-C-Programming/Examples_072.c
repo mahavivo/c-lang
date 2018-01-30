@@ -12,8 +12,8 @@ void print(LinkList h);
 
 int main()
 {
-	// 创建一个链表。
-	LinkList Head = NULL;
+    // 创建一个链表。
+    LinkList Head = NULL;
     int n;
     
     scanf("%d", &n);

@@ -3,38 +3,38 @@
 
 int main()
 {
-	// 判断最大值
-	int i, num;
-	float *data;
+    // 判断最大值
+    int i, num;
+    float *data;
 
-	printf("输入元素个数(1 ~ 100): ");
-	scanf("%d", &num);
+    printf("输入元素个数(1 ~ 100): ");
+    scanf("%d", &num);
 
-	// 为 'num' 元素分配内存
-	data = (float*) calloc(num, sizeof(float));
+    // 为 'num' 元素分配内存
+    data = (float*) calloc(num, sizeof(float));
 
-	if (data == NULL)
-	{
-		printf("Error!!! 内存没有分配。");
-		exit(0);
-	}
+    if (data == NULL)
+    {
+        printf("Error!!! 内存没有分配。");
+        exit(0);
+    }
 
-	printf("\n");
+    printf("\n");
 
-	// 用户输入
-	for (i = 0; i < num; ++i)
-	{
-		printf("输入数字 %d: ", i + 1);
-		scanf("%f", data + i);
-	}
+    // 用户输入
+    for (i = 0; i < num; ++i)
+    {
+        printf("输入数字 %d: ", i + 1);
+        scanf("%f", data + i);
+    }
 
-	for (i = 0; i < num; ++i)
-	{
-		if (*data < *(data + i))
-			*data = *(data + i);
-	}
+    for (i = 0; i < num; ++i)
+    {
+        if (*data < *(data + i))
+            *data = *(data + i);
+    }
 
-	printf("最大的元素 = %.2f", *data);
+    printf("最大的元素 = %.2f", *data);
 
-	return 0;
+    return 0;
 }

@@ -4,21 +4,21 @@
 int convertBinarytoOctal(long long binaryNumber);
 int main()
 {
-	// 二进制转换为八进制
+    // 二进制转换为八进制
 
-	long long binaryNumber;
+    long long binaryNumber;
 
-	printf("输入一个二进制数: ");
-	scanf("%lld", &binaryNumber);
+    printf("输入一个二进制数: ");
+    scanf("%lld", &binaryNumber);
 
-	printf("二进制数 %lld 转换为八进制为 %d", binaryNumber, convertBinarytoOctal(binaryNumber));
+    printf("二进制数 %lld 转换为八进制为 %d", binaryNumber, convertBinarytoOctal(binaryNumber));
 
-	return 0;
+    return 0;
 }
 
 int convertBinarytoOctal(long long binaryNumber)
 {
-	int octalNumber = 0, decimalNumber = 0, i = 0;
+    int octalNumber = 0, decimalNumber = 0, i = 0;
  
     while(binaryNumber != 0)
     {

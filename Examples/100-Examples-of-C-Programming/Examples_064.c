@@ -4,8 +4,8 @@
 
 int main()
 {
-	// 利用ellipse and rectangle 画图（在TC中实现）。
-	int driver = VGA, mode = VGAHI;
+    // 利用ellipse and rectangle 画图（在TC中实现）。
+    int driver = VGA, mode = VGAHI;
     int i, num = 15, top = 50;
     int left = 20, right = 50;
     initgraph(&driver, &mode, "");

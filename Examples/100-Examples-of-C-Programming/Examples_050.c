@@ -3,8 +3,8 @@
 
 int main()
 {
-	// #include 的应用练习。
-	int i=10;
+    // #include 的应用练习。
+    int i=10;
     int j=20;
     if(i LAG j)
         printf("%d 大于 %d \n",i,j);

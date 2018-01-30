@@ -11,7 +11,7 @@ LinkList CreateList(int n);
 void print(LinkList h);
 int main()
 {
-	// 反向输出一个链表。
+    // 反向输出一个链表。
     LinkList Head=NULL;
     int n;
     

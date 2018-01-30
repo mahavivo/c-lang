@@ -3,8 +3,8 @@
 
 int main()
 {
-	// 画图，综合例子。（在TC中实现）。
-	int i,j,k,x0,y0,x,y,driver,mode;
+    // 画图，综合例子。（在TC中实现）。
+    int i,j,k,x0,y0,x,y,driver,mode;
     float a;
     driver=CGA;mode=CGAC0;
     initgraph(&driver,&mode,"");

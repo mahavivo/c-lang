@@ -11,9 +11,9 @@ void output(Stu*stu);
 
 int main()
 {
-	// 编写input()和output()函数输入，输出5个学生的数据记录。
+    // 编写input()和output()函数输入，输出5个学生的数据记录。
 
-	Stu stu[5];
+    Stu stu[5];
     printf("请输入5个学生的信息：姓名 性别 年龄:\n");
     input(stu);
     printf("5个学生的信息如下：\n姓名  性别  年龄\n");
