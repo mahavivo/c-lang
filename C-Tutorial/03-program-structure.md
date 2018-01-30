@@ -14,15 +14,15 @@ C 程序主要包括以下部分：
 让我们看一段简单的代码，可以输出单词 "Hello World"：
 
 ```c
-    #include <stdio.h>
+#include <stdio.h>
 
-    int main()
-    {
-       /* 我的第一个 C 程序 */
-       printf("Hello, World! \n");
+int main()
+{
+  /* 我的第一个 C 程序 */
+  printf("Hello, World! \n");
 
-       return 0;
-    }
+  return 0;
+}
 ```
 
 接下来我们讲解一下上面这段程序：
@@ -45,9 +45,9 @@ C 程序主要包括以下部分：
 7. 您可以看到屏幕上显示 _"Hello, World!"_。
 
 ```
-    $ gcc hello.c
-    $ ./a.out
-    Hello, World!
+$ gcc hello.c
+$ ./a.out
+Hello, World!
 ```
 
 请确保您的路径中已包含 gcc 编译器，并确保在包含源文件 hello.c 的目录中运行它。  

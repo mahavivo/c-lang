@@ -4,18 +4,18 @@
 
 C 语言中 **switch** 语句的语法：
 
-    switch(expression){
-        case constant-expression  :
-           statement(s);
-           break; /* 可选的 */
-        case constant-expression  :
-           statement(s);
-           break; /* 可选的 */
+switch(expression){
+    case constant-expression  :
+       statement(s);
+       break; /* 可选的 */
+    case constant-expression  :
+       statement(s);
+       break; /* 可选的 */
 
-        /* 您可以有任意数量的 case 语句 */
-        default : /* 可选的 */
-           statement(s);
-    }
+    /* 您可以有任意数量的 case 语句 */
+    default : /* 可选的 */
+       statement(s);
+}
 
 **switch** 语句必须遵循下面的规则：
 * **switch** 语句中的 **expression** 必须是一个整型或枚举类型，或者是一个 class 类型，其中 class 有一个单一的转换函数将其转换为整型或枚举类型。
@@ -28,37 +28,37 @@ C 语言中 **switch** 语句的语法：
 
 ![C 中的判断语句](images/switch_statement.jpg)
 
-    #include 
+#include
 
-    int main ()
-    {
-       /* 局部变量定义 */
-       char grade = 'B';
+int main ()
+{
+   /* 局部变量定义 */
+   char grade = 'B';
 
-       switch(grade)
-       {
-       case 'A' :
-          printf("很棒！n" );
-          break;
-       case 'B' :
-       case 'C' :
-          printf("做得好n" );
-          break;
-       case 'D' :
-          printf("您通过了n" );
-          break;
-       case 'F' :
-          printf("最好再试一下n" );
-          break;
-       default :
-          printf("无效的成绩n" );
-       }
-       printf("您的成绩是 %cn", grade );
+   switch(grade)
+   {
+   case 'A' :
+      printf("很棒！n" );
+      break;
+   case 'B' :
+   case 'C' :
+      printf("做得好n" );
+      break;
+   case 'D' :
+      printf("您通过了n" );
+      break;
+   case 'F' :
+      printf("最好再试一下n" );
+      break;
+   default :
+      printf("无效的成绩n" );
+   }
+   printf("您的成绩是 %cn", grade );
 
-       return 0;
-    }
+   return 0;
+}
 
 当上面的代码被编译和执行时，它会产生下列结果：
 
-    做得好
-    您的成绩是 B
+做得好
+您的成绩是 B

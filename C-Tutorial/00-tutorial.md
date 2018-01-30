@@ -16,15 +16,15 @@ C 语言是一种广泛使用的计算机语言，它与 Java 编程语言一样
 
 ## 编译/执行 C 程序
 ```c
-    #include <stdio.h>
+#include <stdio.h>
 
-    int main()
-    {
-        /* 我的第一个 C 程序 */
-        printf("Hello, World! \n");
+int main()
+{
+  /* 我的第一个 C 程序 */
+  printf("Hello, World! \n");
 
-        return 0;
-    }
+  return 0;
+}
 ```
 **实例解析：**
 

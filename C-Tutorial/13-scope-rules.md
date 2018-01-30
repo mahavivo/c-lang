@@ -11,23 +11,23 @@
 在某个函数或块的内部声明的变量称为局部变量。它们只能被该函数或该代码块内部的语句使用。局部变量在函数外部是不可知的。下面是使用局部变量的实例。在这里，所有的变量 a、b 和 c 是 main() 函数的局部变量。
 
 ```c
-    #include
+#include <stdio.h>
 
-    int main ()
-    {
-      /* 局部变量声明 */
-      int a, b;
-      int c;
+int main ()
+{
+  /* 局部变量声明 */
+  int a, b;
+  int c;
 
-      /* 实际初始化 */
-      a = 10;
-      b = 20;
-      c = a + b;
+  /* 实际初始化 */
+  a = 10;
+  b = 20;
+  c = a + b;
 
-      printf ("value of a = %d, b = %d and c = %dn", a, b, c);
+  printf ("value of a = %d, b = %d and c = %dn", a, b, c);
 
-      return 0;
-    }
+  return 0;
+}
 ```
 
 ## 全局变量
@@ -36,92 +36,92 @@
 全局变量可以被任何函数访问。也就是说，全局变量在声明后整个程序中都是可用的。下面是使用全局变量和局部变量的实例：
 
 ```c
-    #include
+#include <stdio.h>
 
-    /* 全局变量声明 */
-    int g;
+/* 全局变量声明 */
+int g;
 
-    int main ()
-    {
-      /* 局部变量声明 */
-      int a, b;
+int main ()
+{
+  /* 局部变量声明 */
+  int a, b;
 
-      /* 实际初始化 */
-      a = 10;
-      b = 20;
-      g = a + b;
+  /* 实际初始化 */
+  a = 10;
+  b = 20;
+  g = a + b;
 
-      printf ("value of a = %d, b = %d and g = %dn", a, b, g);
+  printf ("value of a = %d, b = %d and g = %dn", a, b, g);
 
-      return 0;
-    }
+  return 0;
+}
 ```
 
 在程序中，局部变量和全局变量的名称可以相同，但是在函数内，局部变量的值会覆盖全局变量的值。下面是一个实例：
 
 ```c
-    #include
+#include <stdio.h>
 
-    /* 全局变量声明 */
-    int g = 20;
+/* 全局变量声明 */
+int g = 20;
 
-    int main ()
-    {
-      /* 局部变量声明 */
-      int g = 10;
+int main ()
+{
+  /* 局部变量声明 */
+  int g = 10;
 
-      printf ("value of g = %dn",  g);
+  printf ("value of g = %dn",  g);
 
-      return 0;
-    }
+  return 0;
+}
 ```
 
 当上面的代码被编译和执行时，它会产生下列结果：
 
 ```
-    value of g = 10
+value of g = 10
 ```
 
 ## 形式参数
 函数的参数，形式参数，被当作该函数内的局部变量，它们会优先覆盖全局变量。下面是一个实例：
 
 ```c
-    #include
+#include <stdio.h>
 
-    /* 全局变量声明 */
-    int a = 20;
+/* 全局变量声明 */
+int a = 20;
 
-    int main ()
-    {
-      /* 在主函数中的局部变量声明 */
-      int a = 10;
-      int b = 20;
-      int c = 0;
+int main ()
+{
+  /* 在主函数中的局部变量声明 */
+  int a = 10;
+  int b = 20;
+  int c = 0;
 
-      printf ("value of a in main() = %dn",  a);
-      c = sum( a, b);
-      printf ("value of c in main() = %dn",  c);
+  printf ("value of a in main() = %dn",  a);
+  c = sum( a, b);
+  printf ("value of c in main() = %dn",  c);
 
-      return 0;
-    }
+  return 0;
+}
 
-    /* 添加两个整数的函数 */
-    int sum(int a, int b)
-    {
-        printf ("value of a in sum() = %dn",  a);
-        printf ("value of b in sum() = %dn",  b);
+/* 添加两个整数的函数 */
+int sum(int a, int b)
+{
+    printf ("value of a in sum() = %dn",  a);
+    printf ("value of b in sum() = %dn",  b);
 
-        return a + b;
-    }
+    return a + b;
+}
 ```
 
 当上面的代码被编译和执行时，它会产生下列结果：
 
 ```
-    value of a in main() = 10
-    value of a in sum() = 10
-    value of b in sum() = 20
-    value of c in main() = 30
+value of a in main() = 10
+value of a in sum() = 10
+value of b in sum() = 20
+value of c in main() = 30
 ```
 
 ## 初始化局部变量和全局变量

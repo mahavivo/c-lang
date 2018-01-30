@@ -12,16 +12,16 @@ C 语言也允许定义各种其他类型的变量，比如枚举、指针、数
 变量定义就是告诉编译器在何处创建变量的存储，以及如何创建变量的存储。变量定义指定一个数据类型，并包含了该类型的一个或多个变量的列表，如下所示：
 
 ```c
-    type variable_list;
+type variable_list;
 ```
 
 在这里，**type** 必须是一个有效的 C 数据类型，可以是 char、w_char、int、float、double、bool 或任何用户自定义的对象，**variable_list** 可以由一个或多个标识符名称组成，多个标识符之间用逗号分隔。下面列出几个有效的声明：
 
 ```c
-    int    i, j, k;
-    char   c, ch;
-    float  f, salary;
-    double d;
+int    i, j, k;
+char   c, ch;
+float  f, salary;
+double d;
 ```
 
 行 **int i, j, k;** 声明并定义了变量 i、j 和 k，这指示编译器创建类型为 int 的名为 i、j、k 的变量。
@@ -29,16 +29,16 @@ C 语言也允许定义各种其他类型的变量，比如枚举、指针、数
 变量可以在声明的时候被初始化（指定一个初始值）。初始化器由一个等号，后跟一个常量表达式组成，如下所示：
 
 ```c
-    type variable_name = value;
+type variable_name = value;
 ```
 
 下面列举几个实例：
 
 ```c
-    extern int d = 3, f = 5;    // d 和 f 的声明
-    int d = 3, f = 5;           // 定义并初始化 d 和 f
-    byte z = 22;                // 定义并初始化 z
-    char x = 'x';               // 变量 x 的值为 'x'
+extern int d = 3, f = 5;    // d 和 f 的声明
+int d = 3, f = 5;           // 定义并初始化 d 和 f
+byte z = 22;                // 定义并初始化 z
+char x = 'x';               // 变量 x 的值为 'x'
 ```
 
 不带初始化的定义：带有静态存储持续时间的变量会被隐式初始化为 NULL（所有字节的值都是 0），其他所有变量的初始值是未定义的。
@@ -52,58 +52,58 @@ C 语言也允许定义各种其他类型的变量，比如枚举、指针、数
 尝试下面的实例，其中，变量在头部就已经被声明，但它们是在主函数内被定义和初始化的：
 
 ```c
-    #include <stdio.h>
+#include <stdio.h>
 
-    // 变量声明
-    extern int a, b;
-    extern int c;
-    extern float f;
+// 变量声明
+extern int a, b;
+extern int c;
+extern float f;
 
-    int main ()
-    {
-      /* 变量定义 */
-      int a, b;
-      int c;
-      float f;
+int main ()
+{
+  /* 变量定义 */
+  int a, b;
+  int c;
+  float f;
 
-      /* 实际初始化 */
-      a = 10;
-      b = 20;
+  /* 实际初始化 */
+  a = 10;
+  b = 20;
 
-      c = a + b;
-      printf("value of c : %d \n", c);
+  c = a + b;
+  printf("value of c : %d \n", c);
 
-      f = 70.0/3.0;
-      printf("value of f : %f \n", f);
+  f = 70.0/3.0;
+  printf("value of f : %f \n", f);
 
-      return 0;
-    }
+  return 0;
+}
 ```
 
 当上面的代码被编译和执行时，它会产生下列结果：
 
 ```
-    value of c : 30
-    value of f : 23.333334
+value of c : 30
+value of f : 23.333334
 ```
 
 同样的，在函数声明时，提供一个函数名，而函数的实际定义则可以在任何地方进行。例如：
 
 ```c
-    // 函数声明
-    int func();
+// 函数声明
+int func();
 
-    int main()
-    {
-        // 函数调用
-        int i = func();
-    }
+int main()
+{
+    // 函数调用
+    int i = func();
+}
 
-    // 函数定义
-    int func()
-    {
-        return 0;
-    }
+// 函数定义
+int func()
+{
+    return 0;
+}
 ```
 
 ## C 中的左值（Lvalues）和右值（Rvalues）
@@ -115,11 +115,11 @@ C 中有两种类型的表达式：
 变量是左值，因此可以出现在赋值号的左边。数值型的字面值是右值，因此不能被赋值，不能出现在赋值号的左边。下面是一个有效的语句：
 
 ```c
-    int g = 20;
+int g = 20;
 ```
 
 但是下面这个就不是一个有效的语句，会生成编译时错误：
 
 ```c
-    10 = 20;
+10 = 20;
 ```

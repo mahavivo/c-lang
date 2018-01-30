@@ -16,21 +16,21 @@ C 中的类型可分为以下几种：
 为了得到某个类型或某个变量在特定平台上的准确大小，您可以使用 **sizeof** 运算符。表达式 _sizeof(type)_ 得到对象或类型的存储字节大小。下面的实例演示了获取 int 类型的大小：
 
 ```c
-    #include <stdio.h>
-    #include <limits.h>
+#include <stdio.h>
+#include <limits.h>
 
-    int main()
-    {
-       printf("int 存储大小 : %lu \n", sizeof(int));
+int main()
+{
+   printf("int 存储大小 : %lu \n", sizeof(int));
 
-       return 0;
-    }
+   return 0;
+}
 ```
 
 当您在 Linux 上编译并执行上面的程序时，它会产生下列结果：
 
 ```
-    int 存储大小 : 4 
+int 存储大小 : 4
 ```
 
 ## 浮点类型
@@ -41,27 +41,27 @@ C 中的类型可分为以下几种：
 头文件 float.h 定义了宏，在程序中可以使用这些值和其他有关实数二进制表示的细节。下面的实例将输出浮点类型占用的存储空间以及它的范围值：
 
 ```c
-    #include <stdio.h>
-    #include <float.h>
+#include <stdio.h>
+#include <float.h>
 
-    int main()
-    {
-       printf("Storage size for float: %d\n", sizeof(float));
-       printf("Minimum float positive value: %E\n", FLT_MIN );
-       printf("Maximum float positive value: %E\n", FLT_MAX );
-       printf("Precision value: %d\n", FLT_DIG );
+int main()
+{
+   printf("Storage size for float: %d\n", sizeof(float));
+   printf("Minimum float positive value: %E\n", FLT_MIN );
+   printf("Maximum float positive value: %E\n", FLT_MAX );
+   printf("Precision value: %d\n", FLT_DIG );
 
-       return 0;
-    }
+   return 0;
+}
 ```
 
 当您在 Linux 上编译并执行上面的程序时，它会产生下列结果：
 
 ```
-    Storage size for float : 4
-    Minimum float positive value: 1.175494E-38
-    Maximum float positive value: 3.402823E+38
-    Precision value: 6
+Storage size for float : 4
+Minimum float positive value: 1.175494E-38
+Maximum float positive value: 3.402823E+38
+Precision value: 6
 ```
 
 ## void 类型

@@ -14,10 +14,10 @@ C 标准库提供了大量的程序可以调用的内置函数。例如，函数
 C 语言中的函数定义的一般形式如下：
 
 ```c
-    return_type function_name( parameter list )
-    {
-       body of the function
-    }
+return_type function_name( parameter list )
+{
+   body of the function
+}
 ```
 
 在 C 语言中，函数由一个函数头和一个函数主体组成。下面列出一个函数的所有组成部分：
@@ -31,19 +31,19 @@ C 语言中的函数定义的一般形式如下：
 以下是 **max()** 函数的源代码。该函数有两个参数 num1 和 num2，会返回这两个数中较大的那个数：
 
 ```c
-    /* 函数返回两个数中较大的那个数 */
-    int max(int num1, int num2)
-    {
-       /* 局部变量声明 */
-       int result;
+/* 函数返回两个数中较大的那个数 */
+int max(int num1, int num2)
+{
+   /* 局部变量声明 */
+   int result;
 
-       if (num1 > num2)
-          result = num1;
-       else
-          result = num2;
+   if (num1 > num2)
+      result = num1;
+   else
+      result = num2;
 
-       return result;
-    }
+   return result;
+}
 ```
 ## 函数声明
 函数**声明**会告诉编译器函数名称及如何调用函数。函数的实际主体可以单独定义。
@@ -51,19 +51,19 @@ C 语言中的函数定义的一般形式如下：
 函数声明包括以下几个部分：
 
 ```c
-    return_type function_name( parameter list );
+return_type function_name( parameter list );
 ```
 
 针对上面定义的函数 max()，以下是函数声明：
 
 ```c
-    int max(int num1, int num2);
+int max(int num1, int num2);
 ```
 
 在函数声明中，参数的名称并不重要，只有参数的类型是必需的，因此下面也是有效的声明：
 
 ```c
-    int max(int, int);
+int max(int, int);
 ```
 
 当您在一个源文件中定义函数且在另一个文件中调用函数时，函数声明是必需的。在这种情况下，您应该在调用函数的文件顶部声明函数。
@@ -76,45 +76,45 @@ C 语言中的函数定义的一般形式如下：
 调用函数时，传递所需参数，如果函数返回一个值，则可以存储返回值。例如：
 
 ```c
-    #include
+#include <stdio.h>
 
-    /* 函数声明 */
-    int max(int num1, int num2);
+/* 函数声明 */
+int max(int num1, int num2);
 
-    int main ()
-    {
-       /* 局部变量定义 */
-       int a = 100;
-       int b = 200;
-       int ret;
+int main ()
+{
+   /* 局部变量定义 */
+   int a = 100;
+   int b = 200;
+   int ret;
 
-       /* 调用函数来获取最大值 */
-       ret = max(a, b);
+   /* 调用函数来获取最大值 */
+   ret = max(a, b);
 
-       printf( "Max value is : %dn", ret );
+   printf( "Max value is : %dn", ret );
 
-       return 0;
-    }
+   return 0;
+}
 
-    /* 函数返回两个数中较大的那个数 */
-    int max(int num1, int num2)
-    {
-       /* 局部变量声明 */
-       int result;
+/* 函数返回两个数中较大的那个数 */
+int max(int num1, int num2)
+{
+   /* 局部变量声明 */
+   int result;
 
-       if (num1 > num2)
-          result = num1;
-       else
-          result = num2;
+   if (num1 > num2)
+      result = num1;
+   else
+      result = num2;
 
-       return result;
-    }
+   return result;
+}
 ```
 
 把 max() 函数和 main() 函数放一块，编译源代码。当运行最后的可执行文件时，会产生下列结果：
 
 ```
-    Max value is : 200
+Max value is : 200
 ```
 ## 函数参数
 

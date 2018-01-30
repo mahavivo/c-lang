@@ -4,10 +4,10 @@
 
 C 语言中 **for** 循环的语法：
 
-    for ( init; condition; increment )
-    {
-       statement(s);
-    }
+for ( init; condition; increment )
+{
+   statement(s);
+}
 
 下面是 for 循环的控制流：
 
@@ -19,29 +19,29 @@ C 语言中 **for** 循环的语法：
 ![C 中的 for 循环](images/cpp_for_loop.png)
 
 ```
-    #include 
+#include
 
-    int main ()
-    {
-       /* for 循环执行 */
-       for( int a = 10; a < 20; a = a + 1 )
-       {
-          printf("a 的值： %dn", a);
-       }
+int main ()
+{
+   /* for 循环执行 */
+   for( int a = 10; a < 20; a = a + 1 )
+   {
+      printf("a 的值： %dn", a);
+   }
 
-       return 0;
-    }
+   return 0;
+}
 ```
 
 当上面的代码被编译和执行时，它会产生下列结果：
 
-    a 的值： 10
-    a 的值： 11
-    a 的值： 12
-    a 的值： 13
-    a 的值： 14
-    a 的值： 15
-    a 的值： 16
-    a 的值： 17
-    a 的值： 18
-    a 的值： 19
+a 的值： 10
+a 的值： 11
+a 的值： 12
+a 的值： 13
+a 的值： 14
+a 的值： 15
+a 的值： 16
+a 的值： 17
+a 的值： 18
+a 的值： 19

@@ -23,17 +23,17 @@ C 语言编译器用于把源代码编译成最终的可执行程序。这里假
 如果您使用的是 **Linux 或 UNIX**，请在命令行使用下面的命令来检查您的系统上是否安装了 GCC：
 
 ```
-    $ gcc -v
+$ gcc -v
 ```
 
 如果您的计算机上已经安装了 GNU 编译器，则会显示如下消息：
 
 ```
-    Using built-in specs.
-    Target: i386-redhat-linux
-    Configured with: ../configure --prefix=/usr .......
-    Thread model: posix
-    gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)
+Using built-in specs.
+Target: i386-redhat-linux
+Configured with: ../configure --prefix=/usr .......
+Thread model: posix
+gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)
 ```
 
 如果未安装 GCC，那么请按照 http://gcc.gnu.org/install/ 上的详细说明安装 GCC。

@@ -10,37 +10,37 @@ C 语言中 **break** 语句有以下两种用法：
 
 C 语言中 **break** 语句的语法：
 
-    break;
+break;
 
 ![C 中的 for 循环](images/cpp_break_statement.jpg)
 
-    #include 
+#include
 
-    int main ()
-    {
-       /* 局部变量定义 */
-       int a = 10;
+int main ()
+{
+   /* 局部变量定义 */
+   int a = 10;
 
-       /* while 循环执行 */
-       while( a < 20 )
-       {
-          printf("a 的值： %dn", a);
-          a++;
-          if( a > 15)
-          {
-             /* 使用 break 语句终止循环 */
-              break;
-          }
-       }
+   /* while 循环执行 */
+   while( a < 20 )
+   {
+      printf("a 的值： %dn", a);
+      a++;
+      if( a > 15)
+      {
+         /* 使用 break 语句终止循环 */
+          break;
+      }
+   }
 
-       return 0;
-    }
+   return 0;
+}
 
 当上面的代码被编译和执行时，它会产生下列结果：
 
-    a 的值： 10
-    a 的值： 11
-    a 的值： 12
-    a 的值： 13
-    a 的值： 14
-    a 的值： 15
+a 的值： 10
+a 的值： 11
+a 的值： 12
+a 的值： 13
+a 的值： 14
+a 的值： 15

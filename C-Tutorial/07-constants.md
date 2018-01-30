@@ -14,23 +14,23 @@
 下面列举几个整数常量的实例：
 
 ```
-    212         /* 合法的 */
-    215u        /* 合法的 */
-    0xFeeL      /* 合法的 */
-    078         /* 非法的：8 不是八进制的数字 */
-    032UU       /* 非法的：不能重复后缀 */
+212         /* 合法的 */
+215u        /* 合法的 */
+0xFeeL      /* 合法的 */
+078         /* 非法的：8 不是八进制的数字 */
+032UU       /* 非法的：不能重复后缀 */
 ```
 
 以下是各种类型的整数常量的实例：
 
 ```
-    85         /* 十进制 */
-    0213       /* 八进制 */
-    0x4b       /* 十六进制 */
-    30         /* 整数 */
-    30u        /* 无符号整数 */
-    30l        /* 长整数 */
-    30ul       /* 无符号长整数 */
+85         /* 十进制 */
+0213       /* 八进制 */
+0x4b       /* 十六进制 */
+30         /* 整数 */
+30u        /* 无符号整数 */
+30l        /* 长整数 */
+30ul       /* 无符号长整数 */
 ```
 
 ## 浮点常量
@@ -41,11 +41,11 @@
 下面列举几个浮点常量的实例：
 
 ```
-    3.14159       /* 合法的 */
-    314159E-5L    /* 合法的 */
-    510E          /* 非法的：不完整的指数 */
-    210f          /* 非法的：没有小数或指数 */
-    .e55          /* 非法的：缺少整数或分数 */
+3.14159       /* 合法的 */
+314159E-5L    /* 合法的 */
+510E          /* 非法的：不完整的指数 */
+210f          /* 非法的：没有小数或指数 */
+.e55          /* 非法的：缺少整数或分数 */
 ```
 
 ## 字符常量
@@ -61,20 +61,20 @@
 下面的实例显示了一些转义序列字符：
 
 ```c
-    #include
+#include <stdio.h>
 
-    int main()
-    {
-       printf("Hello\tWorld\n\n");
+int main()
+{
+   printf("Hello\tWorld\n\n");
 
-       return 0;
-    }
+   return 0;
+}
 ```
 
 当上面的代码被编译和执行时，它会产生下列结果：
 
 ```c
-    Hello   World
+Hello   World
 ```
 字符串字面值或常量是括在双引号 "" 中的。一个字符串包含类似于字符常量的字符：普通的字符、转义序列和通用的字符。
 
@@ -83,13 +83,13 @@
 下面的实例显示了一些字符串常量。下面这三种形式所显示的字符串是相同的。
 
 ```c
-    "hello, dear"
+"hello, dear"
 
-    "hello,
+"hello,
 
-    dear"
+dear"
 
-    "hello, " "d" "ear"
+"hello, " "d" "ear"
 ```
 在 C 中，有两种简单的定义常量的方式：
 
@@ -101,35 +101,35 @@
 下面是使用 #define 预处理器定义常量的形式：
 
 ```c
-    #define identifier value
+#define identifier value
 ```
 
 具体请看下面的实例：
 
 ```c
-    #include
+#include <stdio.h>
 
-    #define LENGTH 10
-    #define WIDTH  5
-    #define NEWLINE 'n'
+#define LENGTH 10
+#define WIDTH  5
+#define NEWLINE 'n'
 
-    int main()
-    {
+int main()
+{
 
-       int area;
+   int area;
 
-       area = LENGTH * WIDTH;
-       printf("value of area : %d", area);
-       printf("%c", NEWLINE);
+   area = LENGTH * WIDTH;
+   printf("value of area : %d", area);
+   printf("%c", NEWLINE);
 
-       return 0;
-    }
+   return 0;
+}
 ```
 
 当上面的代码被编译和执行时，它会产生下列结果：
 
 ```
-    value of area : 50
+value of area : 50
 ```
 
 ### const 关键字
@@ -137,33 +137,33 @@
 您可以使用 **const** 前缀声明指定类型的常量，如下所示：
 
 ```c
-    const type variable = value;
+const type variable = value;
 ```
 
 具体请看下面的实例：
 
 ```c
-    #include
+#include <stdio.h>
 
-    int main()
-    {
-       const int  LENGTH = 10;
-       const int  WIDTH  = 5;
-       const char NEWLINE = 'n';
-       int area;
+int main()
+{
+   const int  LENGTH = 10;
+   const int  WIDTH  = 5;
+   const char NEWLINE = 'n';
+   int area;
 
-       area = LENGTH * WIDTH;
-       printf("value of area : %d", area);
-       printf("%c", NEWLINE);
+   area = LENGTH * WIDTH;
+   printf("value of area : %d", area);
+   printf("%c", NEWLINE);
 
-       return 0;
-    }
+   return 0;
+}
 ```
 
 当上面的代码被编译和执行时，它会产生下列结果：
 
 ```
-    value of area : 50
+value of area : 50
 ```
 
 请注意，把常量定义为大写字母形式，是一个很好的编程实践。  

@@ -27,18 +27,18 @@ C 提供了下列的控制语句。点击链接查看每个语句的细节。
 如果条件永远不为假，则循环将变成无限循环。**for** 循环在传统意义上可用于实现无限循环。由于构成循环的三个表达式中任何一个都不是必需的，您可以将某些条件表达式留空来构成一个无限循环。
 
 ```c
-    #include
+#include <stdio.h>
 
-    int main ()
-    {
+int main ()
+{
 
-       for( ; ; )
-       {
-          printf("This loop will run forever.n");
-       }
+   for( ; ; )
+   {
+      printf("This loop will run forever.n");
+   }
 
-       return 0;
-    }
+   return 0;
+}
 ```
 
 当条件表达式不存在时，它被假设为真。您也可以设置一个初始值和增量表达式，但是一般情况下，C 程序员偏向于使用 for(;;) 结构来表示一个无限循环。
