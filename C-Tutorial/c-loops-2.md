@@ -3,12 +3,12 @@
 **for** 循环允许您编写一个执行特定次数的循环的重复控制结构。
 
 C 语言中 **for** 循环的语法：
-
+```c
 for ( init; condition; increment )
 {
    statement(s);
 }
-
+```
 下面是 for 循环的控制流：
 
 1. **init** 会首先被执行，且只会执行一次。这一步允许您声明并初始化任何循环控制变量。您也可以不在这里写任何语句，只要有一个分号出现即可。
@@ -18,8 +18,8 @@ for ( init; condition; increment )
 
 ![C 中的 for 循环](images/cpp_for_loop.png)
 
-```
-#include
+```c
+#include <stdio.h>
 
 int main ()
 {
@@ -34,7 +34,7 @@ int main ()
 ```
 
 当上面的代码被编译和执行时，它会产生下列结果：
-
+```
 a 的值： 10
 a 的值： 11
 a 的值： 12
@@ -45,3 +45,4 @@ a 的值： 16
 a 的值： 17
 a 的值： 18
 a 的值： 19
+```

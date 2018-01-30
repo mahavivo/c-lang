@@ -9,12 +9,12 @@ C 语言中 **break** 语句有以下两种用法：
 如果您使用的是嵌套循环（即一个循环内嵌套另一个循环），break 语句会停止执行最内层的循环，然后开始执行该块之后的下一行代码。
 
 C 语言中 **break** 语句的语法：
-
+```c
 break;
-
+```
 ![C 中的 for 循环](images/cpp_break_statement.jpg)
-
-#include
+```c
+#include <stdio.h>
 
 int main ()
 {
@@ -35,12 +35,13 @@ int main ()
 
    return 0;
 }
-
+```
 当上面的代码被编译和执行时，它会产生下列结果：
-
+```
 a 的值： 10
 a 的值： 11
 a 的值： 12
 a 的值： 13
 a 的值： 14
 a 的值： 15
+```

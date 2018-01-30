@@ -3,9 +3,9 @@
 C 语言允许您传递指针给函数，只需要简单地声明函数参数为指针类型即可。
 
 下面的实例中，我们传递一个无符号的 long 型指针给函数，并在函数内改变这个值：
-
-#include
-#include
+```c
+#include <stdio.h>
+#include <time.h>
 
 void getSeconds(unsigned long *par);
 
@@ -27,14 +27,14 @@ void getSeconds(unsigned long *par)
    *par = time( NULL );
    return;
 }
-
+```
 当上面的代码被编译和执行时，它会产生下列结果：
-
+```
 Number of seconds :1294450468
-
+```
 能接受指针作为参数的函数，也能接受数组作为参数，如下所示：
-
-#include
+```c
+#include <stdio.h>
 
 /* 函数声明 */
 double getAverage(int *arr, int size);
@@ -68,7 +68,8 @@ double getAverage(int *arr, int size)
 
   return avg;
 }
-
+```
 当上面的代码被编译和执行时，它会产生下列结果：
-
+```
 Average value is: 214.40000
+```

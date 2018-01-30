@@ -4,7 +4,7 @@
 C 语言允许在一个循环内使用另一个循环，下面演示几个实例来说明这个概念。
 
 C 语言中 **嵌套 for 循环** 语句的语法：
-
+```c
 for ( init; condition; increment )
 {
    for ( init; condition; increment )
@@ -13,9 +13,9 @@ for ( init; condition; increment )
    }
    statement(s);
 }
-
+```
 C 语言中 **嵌套 while 循环** 语句的语法：
-
+```c
 while(condition)
 {
    while(condition)
@@ -24,9 +24,9 @@ while(condition)
    }
    statement(s);
 }
-
+```
 C 语言中 **嵌套 do...while 循环** 语句的语法：
-
+```c
 do
 {
    statement(s);
@@ -36,12 +36,12 @@ do
    }while( condition );
 
 }while( condition );
-
+```
 关于嵌套循环有一点值得注意，您可以在任何类型的循环内嵌套其他任何类型的循环。比如，一个 for 循环可以嵌套在一个 while 循环内，反之亦然。
 
 下面的程序使用了一个嵌套的 for 循环来查找 2 到 100 中的质数：
-
-#include
+```c
+#include <stdio.h>
 
 int main ()
 {
@@ -56,9 +56,9 @@ int main ()
 
    return 0;
 }
-
+```
 当上面的代码被编译和执行时，它会产生下列结果：
-
+```
 2 是质数
 3 是质数
 5 是质数
@@ -84,3 +84,4 @@ int main ()
 83 是质数
 89 是质数
 97 是质数
+```

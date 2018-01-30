@@ -3,7 +3,7 @@
 在 C 语言中，**嵌套** if-else 语句是合法的，这意味着您可以在一个 **if** 或 **else if** 语句内使用另一个 **if** 或 **else if** 语句。
 
 C 语言中 **嵌套 if** 语句的语法：
-
+```c
 if( boolean_expression 1)
 {
    /* 当布尔表达式 1 为真时执行 */
@@ -12,10 +12,10 @@ if( boolean_expression 1)
       /* 当布尔表达式 2 为真时执行 */
    }
 }
-
+```
 您可以嵌套 **else if...else**，方式与嵌套 _if_ 语句相似。
-
-#include
+```c
+#include <stdio.h>
 
 int main ()
 {
@@ -38,9 +38,10 @@ int main ()
 
    return 0;
 }
-
+```
 当上面的代码被编译和执行时，它会产生下列结果：
-
+```
 a 的值是 100，且 b 的值是 200
 a 的准确值是 100
 b 的准确值是 200
+```

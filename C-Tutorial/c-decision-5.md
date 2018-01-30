@@ -3,7 +3,7 @@
 您可以把一个 **switch** 作为一个外部 **switch** 的语句序列的一部分，即可以在一个 **switch** 语句内使用另一个 **switch** 语句。即使内部和外部 switch 的 case 常量包含共同的值，也没有矛盾。
 
 C 语言中 **嵌套 switch** 语句的语法：
-
+```c
 switch(ch1) {
    case 'A':
       printf("这个 A 是外部 switch 的一部分" );
@@ -16,8 +16,10 @@ switch(ch1) {
       break;
    case 'B': /* 外部 B case 代码 */
 }
-
-#include
+```
+实例
+```c
+#include <stdio.h>
 
 int main ()
 {
@@ -38,10 +40,11 @@ int main ()
 
    return 0;
 }
-
+```
 当上面的代码被编译和执行时，它会产生下列结果：
-
+```
 这是外部 switch 的一部分
 这是内部 switch 的一部分
 a 的准确值是 100
 b 的准确值是 200
+```
