@@ -2,7 +2,7 @@
 
 int main()
 {
-    // 输出 "Hello, World!"
+    // 打印 "Hello, World!"
     printf("Hello, World");
     return 0;
 }
