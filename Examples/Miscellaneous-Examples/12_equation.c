@@ -14,7 +14,7 @@ int main()
     {
         d = sqrt(b*b-4*a*c);
         x1 = (-b+d)/(2*a);
-        x1 = (-b-d)/(2*a);
+        x2 = (-b-d)/(2*a);
         if (x1 < x2)
             printf("%0.2f %0.2f\n", x2, x1);
         else
