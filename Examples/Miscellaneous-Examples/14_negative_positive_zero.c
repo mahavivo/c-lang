@@ -17,7 +17,7 @@ int main()
             printf("你输入的是负数。");
     }
     else
-        printf("你输入的是整数。");
+        printf("你输入的是正数。");
 
     return 0;
 }
