@@ -8,7 +8,7 @@ int main()
     char dest[100];
 
     memset(dest, '\0', sizeof(dest));
-    strcpy(src, "This is runoob.com");
+    strcpy(src, "This is google.com");
     strcpy(dest, src);
 
     printf("最终的目标字符串：%s\n", dest);
