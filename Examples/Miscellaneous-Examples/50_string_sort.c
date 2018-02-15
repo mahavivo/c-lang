@@ -21,7 +21,7 @@ int main()
             if (strcmp(str[i], str[j]) > 0)
             {
                 strcpy(temp, str[i]);
-                strcpy(str[i], str[i]);
+                strcpy(str[i], str[j]);
                 strcpy(str[j], temp);
             }
         }
