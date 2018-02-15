@@ -1,25 +1,24 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* remind2.c (Chapter 17, page 418) */
-/* Prints a one-month reminder list (dynamic string version) */
+/* remind2.c (Chapter 17, page 364) */
+/* Prints a one-month reminder list */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_REMIND 50   /* maximum number of reminders */
-#define MSG_LEN 60      /* max length of reminder message */
+#define MAX_REMIND 50
+#define MSG_LEN 60
 
 int read_line(char str[], int n);
 
-int main(void)
+main()
 {
   char *reminders[MAX_REMIND];
   char day_str[3], msg_str[MSG_LEN+1];
@@ -37,6 +36,7 @@ int main(void)
       break;
     sprintf(day_str, "%2d", day);
     read_line(msg_str, MSG_LEN);
+
 
     for (i = 0; i < num_remind; i++)
       if (strcmp(day_str, reminders[i]) < 0)
@@ -65,11 +65,13 @@ int main(void)
 
 int read_line(char str[], int n)
 {
-  int ch, i = 0;
+  char ch;
+  int i = 0;
 
   while ((ch = getchar()) != '\n')
     if (i < n)
       str[i++] = ch;
+
   str[i] = '\0';
   return i;
 }

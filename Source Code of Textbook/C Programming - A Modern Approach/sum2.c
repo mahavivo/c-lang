@@ -1,21 +1,20 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* sum2.c (Chapter 7, page 131) */
-/* Sums a series of numbers (using long variables) */
+/* sum2.c (Chapter 7, page 114) */
+/* Sums a series of numbers (using long int variables) */
 
 #include <stdio.h>
 
-int main(void)
+main()
 {
-  long n, sum = 0;
-
+  long int n, sum = 0;
+  
   printf("This program sums a series of integers.\n");
   printf("Enter integers (0 to terminate): ");
 

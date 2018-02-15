@@ -1,18 +1,17 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* date.c (Chapter 5, page 89) */
+/* date.c (Chapter 5, page 78) */
 /* Prints a date in legal form */
 
 #include <stdio.h>
 
-int main(void)
+main()
 {
   int month, day, year;
 
@@ -46,6 +45,6 @@ int main(void)
     case 12: printf("December");  break;
   }
 
-  printf(", 20%.2d.\n", year);
+  printf(", 19%.2d.\n", year);
   return 0;
 }

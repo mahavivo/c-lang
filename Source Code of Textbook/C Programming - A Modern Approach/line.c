@@ -1,13 +1,12 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* line.c (Chapter 15, page 364) */
+/* line.c (Chapter 15, page 318) */
 
 #include <stdio.h>
 #include <string.h>

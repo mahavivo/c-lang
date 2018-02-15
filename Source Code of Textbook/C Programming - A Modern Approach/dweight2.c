@@ -1,19 +1,18 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* dweight2.c (Chapter 2, page 23) */
-/* Computes the dimensional weight of a
-   box from input provided by the user */
+/* dweight2.c (Chapter 2, page 21) */
+/* Computes the dimensional weight of a box */
+/* from input provided by the user          */
 
 #include <stdio.h>
 
-int main(void)
+main()
 {
   int height, length, width, volume, weight;
 

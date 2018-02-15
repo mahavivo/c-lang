@@ -1,71 +1,73 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* poker.c (Chapter 10, page 233) */
+/* poker.c (Chapter 10, page 199) */
 /* Classifies a poker hand */
 
-#include <stdbool.h>   /* C99 only */
 #include <stdio.h>
 #include <stdlib.h>
 
 #define NUM_RANKS 13
 #define NUM_SUITS 4
 #define NUM_CARDS 5
+#define TRUE 1
+#define FALSE 0
 
-/* external variables */
+typedef int Bool;
+
 int num_in_rank[NUM_RANKS];
 int num_in_suit[NUM_SUITS];
-bool straight, flush, four, three;
+Bool straight, flush, four, three;
 int pairs;   /* can be 0, 1, or 2 */
 
-/* prototypes */
 void read_cards(void);
 void analyze_hand(void);
 void print_result(void);
 
-/**********************************************************
- * main: Calls read_cards, analyze_hand, and print_result *
- *       repeatedly.                                      *
+/********************************************************** 
+ * main: Calls read_cards, analyze_hand, and print_result * 
+ *       repeatedly.                                      * 
  **********************************************************/
-int main(void)
+main()
 {
-  for (;;) {
+  for (;;) {          /* infinite loop */
     read_cards();
     analyze_hand();
     print_result();
   }
 }
 
-/**********************************************************
- * read_cards: Reads the cards into the external          *
- *             variables num_in_rank and num_in_suit;     *
- *             checks for bad cards and duplicate cards.  *
+/********************************************************** 
+ * read_cards: Reads the cards into the external          * 
+ *             variables num_in_rank and num_in_suit;     * 
+ *             checks for bad cards and duplicate cards.  * 
  **********************************************************/
+
 void read_cards(void)
 {
-  bool card_exists[NUM_RANKS][NUM_SUITS];
+  Bool card_exists[NUM_RANKS][NUM_SUITS];
   char ch, rank_ch, suit_ch;
   int rank, suit;
-  bool bad_card;
+  Bool bad_card;
   int cards_read = 0;
 
   for (rank = 0; rank < NUM_RANKS; rank++) {
     num_in_rank[rank] = 0;
-    for (suit = 0; suit < NUM_SUITS; suit++)
-      card_exists[rank][suit] = false;
+    for (suit = 0; suit < NUM_SUITS; suit++) 
+      card_exists[rank][suit] = FALSE;
   }
 
-  for (suit = 0; suit < NUM_SUITS; suit++)
+  for (suit = 0; suit < NUM_SUITS; suit++) 
     num_in_suit[suit] = 0;
 
   while (cards_read < NUM_CARDS) {
-    bad_card = false;
+
+    bad_card = FALSE;
 
     printf("Enter a card: ");
 
@@ -85,7 +87,7 @@ void read_cards(void)
       case 'q': case 'Q': rank = 10; break;
       case 'k': case 'K': rank = 11; break;
       case 'a': case 'A': rank = 12; break;
-      default:            bad_card = true;
+      default:            bad_card = TRUE;
     }
 
     suit_ch = getchar();
@@ -94,11 +96,11 @@ void read_cards(void)
       case 'd': case 'D': suit = 1; break;
       case 'h': case 'H': suit = 2; break;
       case 's': case 'S': suit = 3; break;
-      default:            bad_card = true;
+      default:            bad_card = TRUE;
     }
 
     while ((ch = getchar()) != '\n')
-      if (ch != ' ') bad_card = true;
+      if (ch != ' ') bad_card = TRUE;
 
     if (bad_card)
       printf("Bad card; ignored.\n");
@@ -107,72 +109,68 @@ void read_cards(void)
     else {
       num_in_rank[rank]++;
       num_in_suit[suit]++;
-      card_exists[rank][suit] = true;
+      card_exists[rank][suit] = TRUE;
       cards_read++;
     }
   }
 }
 
-/**********************************************************
- * analyze_hand: Determines whether the hand contains a   *
- *               straight, a flush, four-of-a-kind,       *
- *               and/or three-of-a-kind; determines the   *
- *               number of pairs; stores the results into *
- *               the external variables straight, flush,  *
- *               four, three, and pairs.                  *
+/********************************************************** 
+ * analyze_hand: Determines whether the hand contains a   * 
+ *               straight, a flush, four-of-a-kind,       * 
+ *               and/or a three-of-a-kind; determines the * 
+ *               number of pairs; stores the results into * 
+ *               the external variables straight, flush,  * 
+ *               four, three, and pairs.                  * 
  **********************************************************/
 void analyze_hand(void)
 {
   int num_consec = 0;
   int rank, suit;
 
-  straight = false;
-  flush = false;
-  four = false;
-  three = false;
+  straight = FALSE;
+  flush = FALSE;
+  four = FALSE;
+  three = FALSE;
   pairs = 0;
 
   /* check for flush */
   for (suit = 0; suit < NUM_SUITS; suit++)
     if (num_in_suit[suit] == NUM_CARDS)
-      flush = true;
+      flush = TRUE;
 
   /* check for straight */
   rank = 0;
   while (num_in_rank[rank] == 0) rank++;
-  for (; rank < NUM_RANKS && num_in_rank[rank] > 0; rank++)
+  for (; rank < NUM_RANKS && num_in_rank[rank]; rank++)
     num_consec++;
   if (num_consec == NUM_CARDS) {
-    straight = true;
+    straight = TRUE;
     return;
   }
 
   /* check for 4-of-a-kind, 3-of-a-kind, and pairs */
   for (rank = 0; rank < NUM_RANKS; rank++) {
-    if (num_in_rank[rank] == 4) four = true;
-    if (num_in_rank[rank] == 3) three = true;
+    if (num_in_rank[rank] == 4) four = TRUE;
+    if (num_in_rank[rank] == 3) three = TRUE;
     if (num_in_rank[rank] == 2) pairs++;
   }
 }
-
-/**********************************************************
- * print_result: Prints the classification of the hand,   *
- *               based on the values of the external      *
- *               variables straight, flush, four, three,  *
- *               and pairs.                               *
+/********************************************************** 
+ * print_result: Notifies the user of the result, using   * 
+ *               the external variables straight, flush,  * 
+ *               four, three, and pairs.                  * 
  **********************************************************/
 void print_result(void)
 {
-  if (straight && flush) printf("Straight flush");
-  else if (four)         printf("Four of a kind");
+  if (straight && flush) printf("Straight flush\n\n");
+  else if (four)         printf("Four of a kind\n\n");
   else if (three &&
-           pairs == 1)   printf("Full house");
-  else if (flush)        printf("Flush");
-  else if (straight)     printf("Straight");
-  else if (three)        printf("Three of a kind");
-  else if (pairs == 2)   printf("Two pairs");
-  else if (pairs == 1)   printf("Pair");
-  else                   printf("High card");
-
-  printf("\n\n");
+           pairs == 1)   printf("Full house\n\n");
+  else if (flush)        printf("Flush\n\n");
+  else if (straight)     printf("Straight\n\n");
+  else if (three)        printf("Three of a kind\n\n");
+  else if (pairs == 2)   printf("Two pairs\n\n");
+  else if (pairs == 1)   printf("Pair\n\n");
+  else                   printf("High card\n\n");
 }

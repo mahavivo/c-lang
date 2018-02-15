@@ -1,13 +1,12 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* qsort.c (Chapter 9, page 207) */
+/* qsort.c (Chapter 9, page 175) */
 /* Sorts an array of integers using Quicksort algorithm */
 
 #include <stdio.h>
@@ -17,7 +16,7 @@
 void quicksort(int a[], int low, int high);
 int split(int a[], int low, int high);
 
-int main(void)
+main()
 {
   int a[N], i;
 

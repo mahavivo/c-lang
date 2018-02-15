@@ -1,32 +1,32 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* tsetjmp.c (Chapter 24, page 636) */
+/* tsetjmp.c (Chapter 24, page 547) */
 /* Tests setjmp/longjmp */
 
 #include <setjmp.h>
 #include <stdio.h>
 
-jmp_buf env;
+static jmp_buf env;
 
 void f1(void);
 void f2(void);
 
-int main(void)
+main()
 {
-  if (setjmp(env) == 0)
-    printf("setjmp returned 0\n");
-  else {
+  int ret;
+
+  ret = setjmp(env);
+  printf("setjmp returned %d\n", ret);
+  if (ret != 0) {
     printf("Program terminates: longjmp called\n");
     return 0;
   }
-
   f1();
   printf("Program terminates normally\n");
   return 0;

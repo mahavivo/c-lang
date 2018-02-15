@@ -1,27 +1,26 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* trand.c (Chapter 26, page 687) */
+/* trand.c (Chapter 26, page 571) */
 /* Tests the pseudo-random sequence generation functions */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
+main()
 {
   int i, seed;
 
-  printf("This program displays the first five values of "
+  printf("This program displays the first ten values of "
          "rand.\n");
 
   for (;;) {
-    for (i = 0; i < 5; i++)
+    for (i = 0; i < 10; i++)
       printf("%d ", rand());
     printf("\n\n");
     printf("Enter new seed value (0 to terminate): ");

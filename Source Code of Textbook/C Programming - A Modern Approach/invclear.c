@@ -1,15 +1,14 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* invclear.c (Chapter 22, page 574) */
+/* invclear.c (Chapter 22, page 506) */
 /* Modifies a file of part records by setting the quantity
-   on hand to zero for all records */
+   on hand to zero */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -25,12 +24,12 @@ struct part {
 
 int num_parts;
 
-int main(void)
+main()
 {
   FILE *fp;
   int i;
 
-  if ((fp = fopen("inventory.dat", "rb+")) == NULL) {
+  if ((fp = fopen("invent.dat", "rb+")) == NULL) {
     fprintf(stderr, "Can't open inventory file\n");
     exit(EXIT_FAILURE);
   }

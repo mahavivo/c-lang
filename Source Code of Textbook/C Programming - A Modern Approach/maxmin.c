@@ -1,13 +1,12 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* maxmin.c (Chapter 11, page 250) */
+/* maxmin.c (Chapter 11, page 214) */
 /* Finds the largest and smallest elements in an array */
 
 #include <stdio.h>
@@ -16,14 +15,14 @@
 
 void max_min(int a[], int n, int *max, int *min);
 
-int main(void)
+main()
 {
   int b[N], i, big, small;
 
   printf("Enter %d numbers: ", N);
-  for (i = 0; i < N; i++)
+  for (i = 0; i < N; i++) 
     scanf("%d", &b[i]);
-
+  
   max_min(b, N, &big, &small);
 
   printf("Largest: %d\n", big);

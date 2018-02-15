@@ -1,13 +1,12 @@
 /*********************************************************
- * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K. N. King                                         *
- * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * From C PROGRAMMING: A MODERN APPROACH, by K. N. King  *
+ * Copyright (c) 1996 W. W. Norton & Company, Inc.       *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* guess2.c (Chapter 10, page 226) */
+/* guess2.c (Chapter 10, page 191) */
 /* Asks user to guess a hidden number */
 
 #include <stdio.h>
@@ -16,12 +15,11 @@
 
 #define MAX_NUMBER 100
 
-/* prototypes */
 void initialize_number_generator(void);
 int new_secret_number(void);
 void read_guesses(int secret_number);
 
-int main(void)
+main()
 {
   char command;
   int secret_number;
@@ -37,33 +35,33 @@ int main(void)
     scanf(" %c", &command);
     printf("\n");
   } while (command == 'y' || command == 'Y');
-
   return 0;
 }
 
-/**********************************************************
+/********************************************************** 
  * initialize_number_generator: Initializes the random    *
  *                              number generator using    *
  *                              the time of day.          *
  **********************************************************/
 void initialize_number_generator(void)
 {
-  srand((unsigned) time(NULL));
+  srand((unsigned) time(NULL));   
 }
 
-/**********************************************************
+/********************************************************** 
  * new_secret_number: Returns a randomly chosen number    *
  *                    between 1 and MAX_NUMBER.           *
  **********************************************************/
+
 int new_secret_number(void)
 {
   return rand() % MAX_NUMBER + 1;
 }
 
-/**********************************************************
+/********************************************************** 
  * read_guesses: Repeatedly reads user guesses and tells  *
  *               the user whether each guess is too low,  *
- *               too high, or correct. When the guess is  *
+ *               too high, or correct.  When the guess is *
  *               correct, prints the total number of      *
  *               guesses and returns.                     *
  **********************************************************/
